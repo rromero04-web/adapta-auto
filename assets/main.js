@@ -35,6 +35,96 @@
   };
   observeReveal(document);
 
+  var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ---------- Carrusel de portada ---------- */
+  var hero = $("#hero");
+  if (hero) {
+    var slides = $$(".slide", hero), dots = $$(".hc-dot", hero), pauseBtn = $(".hc-pause", hero);
+    var DURATION = 7000, current = 0, timer = null, paused = reduceMotion, hover = false;
+    hero.style.setProperty("--slide-ms", DURATION + "ms");
+    if (reduceMotion) { hero.classList.add("no-auto"); pauseBtn.setAttribute("aria-pressed", "true"); pauseBtn.setAttribute("aria-label", "Reanudar el carrusel"); }
+
+    var go = function (i, user) {
+      i = (i + slides.length) % slides.length;
+      if (i === current) return;
+      var prev = slides[current];
+      prev.classList.remove("is-active");
+      prev.classList.add("is-leaving");
+      setTimeout(function () { prev.classList.remove("is-leaving"); }, 650);
+      slides.forEach(function (s, j) {
+        var on = j === i;
+        if (on) s.classList.add("is-active");
+        s.setAttribute("aria-hidden", String(!on));
+        $$("a, button", s).forEach(function (el) { el.tabIndex = on ? 0 : -1; });
+      });
+      dots.forEach(function (d, j) {
+        d.classList.remove("is-active");
+        d.setAttribute("aria-selected", String(j === i));
+      });
+      void dots[i].offsetWidth;            // reinicia la barra de progreso
+      dots[i].classList.add("is-active");
+      current = i;
+      if (user) restart();
+    };
+    var restart = function () {
+      clearTimeout(timer);
+      if (paused || hover) return;
+      timer = setTimeout(function () { go(current + 1); restart(); }, DURATION);
+    };
+    var setPaused = function (p) {
+      paused = p;
+      hero.classList.toggle("is-paused", p);
+      pauseBtn.setAttribute("aria-pressed", String(p));
+      pauseBtn.setAttribute("aria-label", p ? "Reanudar el carrusel" : "Pausar el carrusel");
+      if (!p) { hero.classList.remove("no-auto"); var d = dots[current]; d.classList.remove("is-active"); void d.offsetWidth; d.classList.add("is-active"); }
+      restart();
+    };
+
+    $$("[data-dir]", hero).forEach(function (b) { b.addEventListener("click", function () { go(current + Number(b.getAttribute("data-dir")), true); }); });
+    dots.forEach(function (d, j) { d.addEventListener("click", function () { go(j, true); }); });
+    pauseBtn.addEventListener("click", function () { setPaused(!paused); });
+    hero.addEventListener("mouseenter", function () { hover = true; clearTimeout(timer); hero.classList.add("is-paused"); });
+    hero.addEventListener("mouseleave", function () { hover = false; if (!paused) { hero.classList.remove("is-paused"); var d = dots[current]; d.classList.remove("is-active"); void d.offsetWidth; d.classList.add("is-active"); } restart(); });
+    hero.addEventListener("focusin", function () { hover = true; clearTimeout(timer); hero.classList.add("is-paused"); });
+    hero.addEventListener("focusout", function (e) { if (!hero.contains(e.relatedTarget)) { hover = false; if (!paused) hero.classList.remove("is-paused"); restart(); } });
+    hero.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowRight") go(current + 1, true);
+      if (e.key === "ArrowLeft") go(current - 1, true);
+    });
+    var tx = null;
+    hero.addEventListener("touchstart", function (e) { tx = e.touches[0].clientX; }, { passive: true });
+    hero.addEventListener("touchend", function (e) {
+      if (tx == null) return;
+      var dx = e.changedTouches[0].clientX - tx;
+      if (Math.abs(dx) > 50) go(current + (dx < 0 ? 1 : -1), true);
+      tx = null;
+    });
+    document.addEventListener("visibilitychange", function () { if (document.hidden) clearTimeout(timer); else restart(); });
+    restart();
+  }
+
+  /* ---------- Contadores animados ---------- */
+  var counters = $$("[data-countup]");
+  if (counters.length && "IntersectionObserver" in window && !reduceMotion) {
+    var cio = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        cio.unobserve(en.target);
+        var el = en.target, end = Number(el.getAttribute("data-countup")), t0 = null;
+        var step = function (t) {
+          if (!t0) t0 = t;
+          var k = Math.min(1, (t - t0) / 1400);
+          el.textContent = Math.round(end * (1 - Math.pow(1 - k, 3)));
+          if (k < 1) requestAnimationFrame(step);
+        };
+        el.textContent = "0";
+        requestAnimationFrame(step);
+      });
+    }, { threshold: 0.6 });
+    counters.forEach(function (c) { cio.observe(c); });
+  }
+
   /* ---------- Utilidades ---------- */
   var esc = function (s) {
     return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
@@ -92,7 +182,7 @@
   var featured = $("#featured");
   if (featured) {
     var limit = Number(featured.getAttribute("data-limit")) || 6;
-    var list = DATA.filter(function (v) { return !v.vendido && v.fotos && v.fotos.length; })
+    var list = DATA.filter(function (v) { return !v.vendido && !v.fotoOrientativa && v.fotos && v.fotos.length; })
       .sort(function (a, b) { return (b.anio || 0) - (a.anio || 0) || b.id - a.id; }).slice(0, limit);
     featured.innerHTML = list.map(cardHtml).join("");
     observeReveal(featured);
@@ -213,6 +303,7 @@
               '<span class="car-cat">' + esc(CATS[v.categoria] || "") + "</span>" +
               "<h1>" + esc(name) + "</h1>" +
               '<p class="sub">' + [yearText(v), v.km != null && !(v.nuevo && !v.km) ? fmtNum(v.km) + " km" : null, v.cambio].filter(Boolean).map(esc).join(" · ") + "</p>" +
+              (v.fotoOrientativa ? '<div class="sold-note" style="background:var(--bg-soft);color:var(--ink-soft)">' + icon("i-camera") + "<span>La imagen es orientativa. Pídenos fotos reales de este vehículo.</span></div>" : "") +
               (v.vendido ? '<div class="sold-note">' + icon("i-info") + "<span>Este vehículo está vendido. Consúltanos vehículos similares: el stock cambia a diario.</span></div>" : priceHtml(v)) +
               '<div class="actions">' +
                 '<a class="btn btn-primary" href="tel:+34968603322">' + icon("i-phone") + " Llamar: 968 603 322</a>" +

@@ -7,6 +7,8 @@
    - vendido:   true muestra la marca "Vendido · consultar similares"
    - fotos:     lista de imágenes; la primera es la principal. Si está vacía se
                 muestra una ilustración.
+   - fotoOrientativa: true cuando la imagen es un render orientativo generado con
+                tools/render_vehiculos.py y no una foto real del vehículo.
    ========================================================================== */
 
 window.ADAPTA_VEHICULOS = [
@@ -1063,8 +1065,11 @@ window.ADAPTA_VEHICULOS = [
     "alto": null,
     "caracteristicas": [],
     "descripcion": [],
-    "fotos": [],
-    "tipo": "taxi"
+    "fotos": [
+      "assets/fotos/orientativas/865.svg"
+    ],
+    "tipo": "taxi",
+    "fotoOrientativa": true
   },
   {
     "id": 852,
@@ -1086,8 +1091,11 @@ window.ADAPTA_VEHICULOS = [
     "alto": null,
     "caracteristicas": [],
     "descripcion": [],
-    "fotos": [],
-    "tipo": "taxi"
+    "fotos": [
+      "assets/fotos/orientativas/852.svg"
+    ],
+    "tipo": "taxi",
+    "fotoOrientativa": true
   },
   {
     "id": 863,
@@ -1109,8 +1117,11 @@ window.ADAPTA_VEHICULOS = [
     "alto": null,
     "caracteristicas": [],
     "descripcion": [],
-    "fotos": [],
-    "tipo": "furgoneta"
+    "fotos": [
+      "assets/fotos/orientativas/863.svg"
+    ],
+    "tipo": "furgoneta",
+    "fotoOrientativa": true
   },
   {
     "id": 862,
@@ -1132,8 +1143,11 @@ window.ADAPTA_VEHICULOS = [
     "alto": null,
     "caracteristicas": [],
     "descripcion": [],
-    "fotos": [],
-    "tipo": "furgoneta"
+    "fotos": [
+      "assets/fotos/orientativas/862.svg"
+    ],
+    "tipo": "furgoneta",
+    "fotoOrientativa": true
   },
   {
     "id": 860,
@@ -1155,8 +1169,11 @@ window.ADAPTA_VEHICULOS = [
     "alto": null,
     "caracteristicas": [],
     "descripcion": [],
-    "fotos": [],
-    "tipo": "furgoneta"
+    "fotos": [
+      "assets/fotos/orientativas/860.svg"
+    ],
+    "tipo": "furgoneta",
+    "fotoOrientativa": true
   },
   {
     "id": 891,
@@ -1178,8 +1195,11 @@ window.ADAPTA_VEHICULOS = [
     "alto": null,
     "caracteristicas": [],
     "descripcion": [],
-    "fotos": [],
-    "tipo": "furgoneta"
+    "fotos": [
+      "assets/fotos/orientativas/891.svg"
+    ],
+    "tipo": "furgoneta",
+    "fotoOrientativa": true
   }
 ];
 
@@ -1236,7 +1256,8 @@ window.ADAPTA_ADAPTACIONES = [
     "id": 872,
     "nombre": "Butacas",
     "grupo": "Ayudas al transporte",
-    "foto": null
+    "foto": "assets/fotos/orientativas/872.svg",
+    "fotoOrientativa": true
   }
 ];
 

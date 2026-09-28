@@ -26,6 +26,10 @@ fotos: ["assets/fotos/912A.jpg", "assets/fotos/912B.jpg"]
 
 Si un vehículo no tiene fotos se muestra una ilustración.
 
+### Imágenes orientativas
+
+Los vehículos sin foto real usan un render generado con `python3 tools/render_vehiculos.py` (vista lateral del modelo con su adaptación, sobre el fondo de la exposición). Llevan la marca «Imagen orientativa» y el campo `fotoOrientativa: true`, que muestra un aviso en la ficha. En cuanto haya fotos reales, sustitúyalas en `fotos` y elimine ese campo.
+
 ## Editar páginas
 
 Las páginas se generan a partir de `src/`: la cabecera, el pie y los iconos son comunes (`src/partials/`) y el contenido de cada página está en `src/pages/`. Después de editar, regenere las páginas:
