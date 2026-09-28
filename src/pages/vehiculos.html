@@ -1,0 +1,58 @@
+<!--
+title: Vehículos adaptados en venta · Adapta Auto
+description: Stock de vehículos adaptados para silla de ruedas: turismos, monovolúmenes, furgonetas, taxis y vehículos para conducir desde la silla. Revisados y con 12 meses de garantía.
+nav: vehiculos
+scripts: vehiculos
+-->
+<main id="contenido">
+  <section class="page-hero">
+    <div class="bg"><img src="assets/img/exposicion.jpg" alt=""></div>
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Ruta"><a href="index.html">Inicio</a><span aria-hidden="true">›</span>Vehículos</nav>
+      <h1 id="stock-title">Vehículos adaptados</h1>
+      <p>Trabajamos con todas las marcas y modelos. Todos nuestros vehículos se entregan revisados, transferidos, homologados y con 12 meses de garantía mecánica en todo el territorio nacional.</p>
+    </div>
+  </section>
+
+  <section class="section-sm">
+    <div class="container">
+      <div class="toolbar">
+        <div class="filters" role="group" aria-label="Filtrar por categoría" id="filters"></div>
+        <div class="toolbar-row">
+          <p class="results" id="results" aria-live="polite"></p>
+          <div class="toolbar-controls">
+            <label class="search">
+              <span class="sr-only">Buscar por marca, modelo o adaptación</span>
+              <svg aria-hidden="true"><use href="#i-search"/></svg>
+              <input type="search" id="q" placeholder="Buscar marca, modelo, adaptación…">
+            </label>
+            <label class="sr-only" for="sort">Ordenar</label>
+            <select class="select" id="sort">
+              <option value="reciente">Más recientes</option>
+              <option value="precio-asc">Precio: de menor a mayor</option>
+              <option value="precio-desc">Precio: de mayor a menor</option>
+              <option value="km">Menos kilómetros</option>
+            </select>
+            <label class="switch"><input type="checkbox" id="hide-sold"><span class="track" aria-hidden="true"></span> Ocultar vendidos</label>
+          </div>
+        </div>
+      </div>
+      <div class="car-grid" id="stock"></div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:24px">
+    <div class="container">
+      <div class="cta">
+        <div>
+          <h2>¿No encuentras lo que buscas?</h2>
+          <p>El stock cambia a diario. Cuéntanos qué necesitas y lo buscamos por ti, de cualquier marca y modelo.</p>
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="tel:+34968603322"><svg aria-hidden="true"><use href="#i-phone"/></svg> 968 603 322</a>
+          <a class="btn btn-ghost" href="contacto.html#formulario">Escríbenos</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
