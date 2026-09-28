@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Aviso legal y política de privacidad · Adapta Auto</title>
   <meta name="description" content="Aviso legal y política de privacidad de ADAPTA MOVIL, S.L. (Adapta Auto).">
-  <meta name="theme-color" content="#16171b">
+  <meta name="theme-color" content="#fbfcfd">
   <meta property="og:title" content="Aviso legal y política de privacidad · Adapta Auto">
   <meta property="og:description" content="Aviso legal y política de privacidad de ADAPTA MOVIL, S.L. (Adapta Auto).">
   <meta property="og:type" content="website">
@@ -13,9 +13,8 @@
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" href="assets/img/favicon-32.png" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="preload" href="assets/fonts/archivo-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/atkinson-next-var.woff2" as="font" type="font/woff2" crossorigin>
   <script>document.documentElement.className += " js";</script>
   <link rel="stylesheet" href="assets/styles.css">
 
@@ -99,28 +98,11 @@
 
 <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-<div class="topbar">
-  <div class="container">
-    <span class="hide-sm"><svg aria-hidden="true"><use href="#i-clock"/></svg> L–V 9:30–14:00 y 16:30–20:00 <span class="sep">·</span> <strong>Visitas con cita previa</strong></span>
-    <span>
-      <a href="tel:+34968603322">968 603 322</a>
-      <span class="sep">·</span>
-      <a href="tel:+34699934166">699 934 166</a>
-      <span class="sep hide-sm">·</span>
-      <a class="hide-sm" href="mailto:info@adapta-auto.com">info@adapta-auto.com</a>
-    </span>
-  </div>
-</div>
-
-<header class="header" id="header">
-  <div class="container">
-    <a class="logo" href="index.html" aria-label="Adapta Auto, ir al inicio">
-      <img src="assets/img/logo.png" alt="Adapta Auto" width="157" height="75">
-    </a>
+<header class="site-header" id="header">
+  <div class="container bar">
+    <a class="brand" href="index.html" aria-label="Adapta Auto, ir al inicio"><img src="assets/img/logo.png" alt="Adapta Auto" width="157" height="75"></a>
     <a class="header-call" href="tel:+34968603322" aria-label="Llamar al 968 603 322"><svg aria-hidden="true"><use href="#i-phone"/></svg></a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Abrir menú">
-      <svg aria-hidden="true"><use href="#i-menu"/></svg>
-    </button>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Abrir menú"><svg aria-hidden="true"><use href="#i-menu"/></svg></button>
     <nav class="nav" id="nav" aria-label="Principal">
       <ul>
         <li><a href="index.html" data-nav="inicio">Inicio</a></li>
@@ -130,22 +112,31 @@
         <li><a href="empresa.html" data-nav="empresa">Empresa</a></li>
         <li><a href="guia-vehiculo-adaptado.html" data-nav="guia">Guía</a></li>
         <li><a href="contacto.html" data-nav="contacto">Contacto</a></li>
-        <li><a class="btn" href="contacto.html#formulario">Pedir cita</a></li>
+        <li class="nav-extra"><a class="btn btn-red" href="contacto.html#formulario">Pedir cita</a><a class="btn" href="tel:+34968603322"><svg aria-hidden="true"><use href="#i-phone"/></svg> 968 603 322</a></li>
       </ul>
+      <a class="header-tel" href="tel:+34968603322"><span class="lbl">Teléfono</span><strong>968 603 322</strong></a>
+      <div class="header-cta"><a class="btn btn-red" href="contacto.html#formulario">Pedir cita</a></div>
     </nav>
   </div>
 </header>
 
 <main id="contenido">
-  <section class="page-hero">
-    <div class="container">
-      <nav class="breadcrumb" aria-label="Ruta"><a href="index.html">Inicio</a><span aria-hidden="true">›</span>Aviso legal y privacidad</nav>
-      <h1>Aviso legal y política de privacidad</h1>
+  <div class="container page-head">
+    <div class="sheet no-view">
+      <div class="sheet-zones" aria-hidden="true"></div>
+      <div class="zone-row" aria-hidden="true"><span>A</span><span>B</span><span>C</span><span>D</span><span>E</span><span>F</span></div>
+      <span class="sheet-id lbl" aria-hidden="true">Hoja 09 <span>/ 09</span></span>
+      <div class="ph-copy">
+        <nav aria-label="Ruta"><ol class="crumbs"><li><a href="index.html">Inicio</a></li><li aria-current="page">Aviso legal y privacidad</li></ol></nav>
+        <h1>Aviso legal y política de privacidad</h1>
+        <p class="lead">Titular del sitio web, protección de datos y confidencialidad.</p>
+      </div>
     </div>
-  </section>
-  <section class="section">
+  </div>
+
+  <section class="band" style="padding-top:clamp(24px,3vw,40px);padding-bottom:0">
     <div class="container">
-      <article class="prose">
+      <div class="sheet"><article class="prose">
         <h2>Titular del sitio web</h2>
         <p><strong>ADAPTA MOVIL, S.L.</strong><br>C/ Neptuno, Parc. 122, Pol. Ind. La Estrella<br>30500 Molina de Segura (Murcia)<br>C.I.F. B-73227639<br>Tel. <a href="tel:+34968603322">968 603 322</a> · <a href="mailto:info@adapta-auto.com">info@adapta-auto.com</a></p>
         <p>ADAPTA MOVIL, S.L., es una empresa, cuya actividad principal es la compra-venta de vehículos nuevos y usados adaptados para silla de ruedas y para personas con todo tipo de discapacidades, y es titular del Sitio Web (en adelante, el Sitio Web), con domicilio C/ NEPTUNO PARC 122, P.I. LA ESTRELLA-30500-MOLINA DE SEGURA-MURCIA y C.I.F nº B-73227639 (en adelante, “la empresa”).</p>
@@ -163,21 +154,21 @@
         </ol>
         <h2>Confidencialidad</h2>
         <p>El contenido de las comunicaciones, así como el de todos los ficheros anexos, es confidencial, especialmente en lo que respecta a los datos personales, y va dirigido exclusivamente al destinatario referenciado. Si usted no desea recibir correos de nuestra empresa, envíenos un correo a <a href="mailto:info@adapta-auto.com">info@adapta-auto.com</a> manifestando tal deseo.</p>
-      </article>
+      </article></div>
     </div>
   </section>
 </main>
 
 <footer class="footer">
   <div class="container">
-    <div class="footer-grid">
-      <div>
+    <div class="tbf">
+      <div class="cell">
         <a class="flogo" href="index.html" aria-label="Adapta Auto, ir al inicio"><img src="assets/img/logo-blanco.png" alt="Adapta Auto" width="211" height="107"></a>
-        <p style="margin-top:18px">Somos una compra-venta de vehículos nuevos y usados adaptados para silla de ruedas y para personas con todo tipo de discapacidades. Una empresa con más de 20 años en el sector. Entrega y recogida en todo el territorio nacional. Vehículos revisados y garantizados.</p>
-        <div class="socials"><a href="https://www.facebook.com/p/Adapta-Auto-100066540256170/" target="_blank" rel="noopener" aria-label="Adapta Auto en Facebook"><svg aria-hidden="true"><use href="#i-facebook"/></svg></a></div>
+        <p>Compra-venta de vehículos nuevos y usados adaptados para silla de ruedas y para personas con todo tipo de discapacidades. Más de 20 años en el sector. Entrega y recogida en todo el territorio nacional.</p>
+        <a class="social" href="https://www.facebook.com/p/Adapta-Auto-100066540256170/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-facebook"/></svg> Adapta Auto en Facebook</a>
       </div>
-      <div>
-        <h4>Vehículos</h4>
+      <div class="cell">
+        <span class="lbl">Vehículos</span>
         <ul>
           <li><a href="vehiculos.html?cat=conducir">Quiero conducir</a></li>
           <li><a href="vehiculos.html?cat=turismos">Turismos</a></li>
@@ -187,36 +178,34 @@
           <li><a href="adaptaciones.html">Adaptaciones</a></li>
         </ul>
       </div>
-      <div>
-        <h4>Adapta Auto</h4>
+      <div class="cell">
+        <span class="lbl">Adapta Auto</span>
         <ul>
           <li><a href="empresa.html">Quiénes somos</a></li>
           <li><a href="empresa.html#por-que">Por qué nosotros</a></li>
           <li><a href="empresa.html#valores">Nuestros valores</a></li>
           <li><a href="servicios.html">Servicios y garantía</a></li>
-          <li><a href="guia-vehiculo-adaptado.html">Guía gratuita</a></li>
+          <li><a href="guia-vehiculo-adaptado.html">Guía de vehículos adaptados</a></li>
           <li><a href="contacto.html">Contacto y localización</a></li>
         </ul>
       </div>
-      <div>
-        <h4>Contacto</h4>
+      <div class="cell">
+        <span class="lbl">Contacto</span>
         <address>
           Pol. Ind. La Estrella, C/ Neptuno, 122<br>30500 Molina de Segura (Murcia)<br>
           Tel. <a href="tel:+34968603322">968 603 322</a><br>
-          Móvil <a href="tel:+34699934166">699 934 166</a> · <a href="tel:+34626108770">626 108 770</a><br>
+          Móviles <a href="tel:+34699934166">699 934 166</a> y <a href="tel:+34626108770">626 108 770</a><br>
           <a href="mailto:info@adapta-auto.com">info@adapta-auto.com</a><br>
-          L–V 9:30–14:00 y 16:30–20:00
+          <span>Lunes a viernes, 9:30–14:00 y 16:30–20:00, con cita previa</span>
         </address>
       </div>
     </div>
-    <div class="footer-bottom">
+    <div class="fbar">
       <span>© <span data-year>2026</span> ADAPTA MOVIL, S.L. · CIF B-73227639</span>
-      <span><a href="privacidad.html">Aviso legal y política de privacidad</a></span>
+      <a href="privacidad.html">Aviso legal y política de privacidad</a>
     </div>
   </div>
 </footer>
-
-<a class="fab" href="tel:+34968603322" aria-label="Llamar a Adapta Auto"><svg aria-hidden="true"><use href="#i-phone"/></svg></a>
 
 <script src="assets/main.js"></script>
 </body>

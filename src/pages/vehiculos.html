@@ -5,52 +5,51 @@ nav: vehiculos
 scripts: vehiculos
 -->
 <main id="contenido">
-  <section class="page-hero">
-    <div class="bg"><img src="assets/img/exposicion.jpg" alt=""></div>
-    <div class="container">
-      <nav class="breadcrumb" aria-label="Ruta"><a href="index.html">Inicio</a><span aria-hidden="true">›</span>Vehículos</nav>
-      <h1 id="stock-title">Vehículos adaptados</h1>
-      <p>Trabajamos con todas las marcas y modelos. Todos nuestros vehículos se entregan revisados, transferidos, homologados y con 12 meses de garantía mecánica en todo el territorio nacional.</p>
-    </div>
-  </section>
-
-  <section class="section-sm">
-    <div class="container">
-      <div class="toolbar">
-        <div class="filters" role="group" aria-label="Filtrar por categoría" id="filters"></div>
-        <div class="toolbar-row">
-          <p class="results" id="results" aria-live="polite"></p>
-          <div class="toolbar-controls">
-            <label class="search">
-              <span class="sr-only">Buscar por marca, modelo o adaptación</span>
-              <svg aria-hidden="true"><use href="#i-search"/></svg>
-              <input type="search" id="q" placeholder="Buscar marca, modelo, adaptación…">
-            </label>
-            <label class="sr-only" for="sort">Ordenar</label>
+  <div class="container page-head">
+    <div class="sheet no-view">
+      <div class="sheet-zones" aria-hidden="true"></div>
+      <div class="zone-row" aria-hidden="true"><span>A</span><span>B</span><span>C</span><span>D</span><span>E</span><span>F</span></div>
+      <span class="sheet-id lbl" aria-hidden="true">Hoja 02 <span>/ 09</span></span>
+      <div class="ph-copy">
+        <nav aria-label="Ruta"><ol class="crumbs"><li><a href="index.html">Inicio</a></li><li aria-current="page">Vehículos</li></ol></nav>
+        <h1 id="stock-title">Vehículos adaptados</h1>
+        <p class="lead">Trabajamos con todas las marcas y modelos. Todos los vehículos se entregan revisados, transferidos, homologados y con 12 meses de garantía mecánica en todo el territorio nacional.</p>
+      </div>
+      <div class="tools">
+        <div class="field-inline"><span class="lbl" id="cat-label">Mostrar capa</span><div class="seg" role="group" aria-labelledby="cat-label" id="filters"></div></div>
+        <div class="tools-row">
+          <label class="field-inline search"><span class="lbl">Buscar</span><svg aria-hidden="true"><use href="#i-search"/></svg><input class="input" type="search" id="q" placeholder="Marca, modelo o adaptación" autocomplete="off"></label>
+          <label class="field-inline"><span class="lbl">Ordenar</span>
             <select class="select" id="sort">
               <option value="reciente">Más recientes</option>
               <option value="precio-asc">Precio: de menor a mayor</option>
               <option value="precio-desc">Precio: de mayor a menor</option>
               <option value="km">Menos kilómetros</option>
             </select>
-            <label class="switch"><input type="checkbox" id="hide-sold"><span class="track" aria-hidden="true"></span> Ocultar vendidos</label>
-          </div>
+          </label>
+          <label class="check"><input type="checkbox" id="hide-sold"> Ocultar vendidos</label>
+          <p class="results" id="results" aria-live="polite"></p>
         </div>
       </div>
-      <div class="car-grid" id="stock"></div>
+    </div>
+  </div>
+
+  <section class="band" style="padding-top:clamp(24px,3vw,40px);padding-bottom:0" aria-labelledby="h-results">
+    <div class="container">
+      <h2 class="sr-only" id="h-results">Resultados</h2>
+      <div class="vs-grid" id="stock"></div>
     </div>
   </section>
 
-  <section class="section" style="padding-top:24px">
+  <section class="band" style="padding-bottom:0">
     <div class="container">
-      <div class="cta">
-        <div>
-          <h2>¿No encuentras lo que buscas?</h2>
-          <p>El stock cambia a diario. Cuéntanos qué necesitas y lo buscamos por ti, de cualquier marca y modelo.</p>
-        </div>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="tel:+34968603322"><svg aria-hidden="true"><use href="#i-phone"/></svg> 968 603 322</a>
-          <a class="btn btn-ghost" href="contacto.html#formulario">Escríbenos</a>
+      <div class="sheet contact-block">
+        <div class="contact-head">
+          <div>
+            <h2>¿No encuentras lo que buscas?</h2>
+            <p>El stock cambia a diario. Cuéntanos qué necesitas y lo buscamos por ti, de cualquier marca y modelo.</p>
+          </div>
+          <div class="actions"><a class="btn btn-red" href="tel:+34968603322"><svg aria-hidden="true"><use href="#i-phone"/></svg> 968 603 322</a><a class="btn" href="contacto.html#formulario">Escribirnos <svg class="go" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
         </div>
       </div>
     </div>

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contacto y localización · Adapta Auto</title>
   <meta name="description" content="Contacta con Adapta Auto: Pol. Ind. La Estrella, C/ Neptuno 122, 30500 Molina de Segura (Murcia). Tel. 968 603 322 · Móvil 699 934 166 · info@adapta-auto.com. Visitas con cita previa.">
-  <meta name="theme-color" content="#16171b">
+  <meta name="theme-color" content="#fbfcfd">
   <meta property="og:title" content="Contacto y localización · Adapta Auto">
   <meta property="og:description" content="Contacta con Adapta Auto: Pol. Ind. La Estrella, C/ Neptuno 122, 30500 Molina de Segura (Murcia). Tel. 968 603 322 · Móvil 699 934 166 · info@adapta-auto.com. Visitas con cita previa.">
   <meta property="og:type" content="website">
@@ -13,9 +13,8 @@
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" href="assets/img/favicon-32.png" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="preload" href="assets/fonts/archivo-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/atkinson-next-var.woff2" as="font" type="font/woff2" crossorigin>
   <script>document.documentElement.className += " js";</script>
   <link rel="stylesheet" href="assets/styles.css">
 
@@ -99,28 +98,11 @@
 
 <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-<div class="topbar">
-  <div class="container">
-    <span class="hide-sm"><svg aria-hidden="true"><use href="#i-clock"/></svg> L–V 9:30–14:00 y 16:30–20:00 <span class="sep">·</span> <strong>Visitas con cita previa</strong></span>
-    <span>
-      <a href="tel:+34968603322">968 603 322</a>
-      <span class="sep">·</span>
-      <a href="tel:+34699934166">699 934 166</a>
-      <span class="sep hide-sm">·</span>
-      <a class="hide-sm" href="mailto:info@adapta-auto.com">info@adapta-auto.com</a>
-    </span>
-  </div>
-</div>
-
-<header class="header" id="header">
-  <div class="container">
-    <a class="logo" href="index.html" aria-label="Adapta Auto, ir al inicio">
-      <img src="assets/img/logo.png" alt="Adapta Auto" width="157" height="75">
-    </a>
+<header class="site-header" id="header">
+  <div class="container bar">
+    <a class="brand" href="index.html" aria-label="Adapta Auto, ir al inicio"><img src="assets/img/logo.png" alt="Adapta Auto" width="157" height="75"></a>
     <a class="header-call" href="tel:+34968603322" aria-label="Llamar al 968 603 322"><svg aria-hidden="true"><use href="#i-phone"/></svg></a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Abrir menú">
-      <svg aria-hidden="true"><use href="#i-menu"/></svg>
-    </button>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Abrir menú"><svg aria-hidden="true"><use href="#i-menu"/></svg></button>
     <nav class="nav" id="nav" aria-label="Principal">
       <ul>
         <li><a href="index.html" data-nav="inicio">Inicio</a></li>
@@ -130,86 +112,94 @@
         <li><a href="empresa.html" data-nav="empresa">Empresa</a></li>
         <li><a href="guia-vehiculo-adaptado.html" data-nav="guia">Guía</a></li>
         <li><a href="contacto.html" data-nav="contacto" aria-current="page">Contacto</a></li>
-        <li><a class="btn" href="contacto.html#formulario">Pedir cita</a></li>
+        <li class="nav-extra"><a class="btn btn-red" href="contacto.html#formulario">Pedir cita</a><a class="btn" href="tel:+34968603322"><svg aria-hidden="true"><use href="#i-phone"/></svg> 968 603 322</a></li>
       </ul>
+      <a class="header-tel" href="tel:+34968603322"><span class="lbl">Teléfono</span><strong>968 603 322</strong></a>
+      <div class="header-cta"><a class="btn btn-red" href="contacto.html#formulario">Pedir cita</a></div>
     </nav>
   </div>
 </header>
 
 <main id="contenido">
-  <section class="page-hero">
-    <div class="bg"><img src="assets/img/instalaciones.jpg" alt=""></div>
-    <div class="container">
-      <nav class="breadcrumb" aria-label="Ruta"><a href="index.html">Inicio</a><span aria-hidden="true">›</span>Contacto</nav>
-      <h1>Contacto y localización</h1>
-      <p>Para cualquier solicitud de información puede ponerse en contacto con nosotros. Estaremos encantados de facilitarle la información que precise.</p>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container contact">
-      <div class="contact-info">
-        <div class="info-card"><span class="ico"><svg aria-hidden="true"><use href="#i-phone"/></svg></span><div><h3>Teléfonos</h3><p>Teléfono: <a href="tel:+34968603322">968 603 322</a><br>Móvil: <a href="tel:+34699934166">699 934 166</a><br>Móvil: <a href="tel:+34626108770">626 108 770</a></p></div></div>
-        <div class="info-card"><span class="ico"><svg aria-hidden="true"><use href="#i-mail"/></svg></span><div><h3>Email</h3><p><a href="mailto:info@adapta-auto.com">info@adapta-auto.com</a></p></div></div>
-        <div class="info-card"><span class="ico"><svg aria-hidden="true"><use href="#i-pin"/></svg></span><div><h3>Oficinas y taller</h3><address>Pol. Ind. La Estrella, C/ Neptuno, 122<br>30500 Molina de Segura (Murcia)</address><p style="margin-top:6px"><a href="https://www.google.com/maps/search/?api=1&query=Calle+Neptuno+122+Pol%C3%ADgono+La+Estrella+30500+Molina+de+Segura" target="_blank" rel="noopener">Cómo llegar ↗</a></p></div></div>
-        <div class="info-card"><span class="ico"><svg aria-hidden="true"><use href="#i-clock"/></svg></span><div style="flex:1"><h3>Horario</h3>
-          <table class="hours"><tbody>
-            <tr><td>Lunes a viernes</td><td>9:30 – 14:00</td></tr>
-            <tr><td></td><td>16:30 – 20:00</td></tr>
-            <tr><td>Sábado y domingo</td><td>Cerrado</td></tr>
-          </tbody></table>
-          <span class="note">Visitas con cita previa</span>
-        </div></div>
+  <div class="container page-head">
+    <div class="sheet no-view">
+      <div class="sheet-zones" aria-hidden="true"></div>
+      <div class="zone-row" aria-hidden="true"><span>A</span><span>B</span><span>C</span><span>D</span><span>E</span><span>F</span></div>
+      <span class="sheet-id lbl" aria-hidden="true">Hoja 08 <span>/ 09</span></span>
+      <div class="ph-copy">
+        <nav aria-label="Ruta"><ol class="crumbs"><li><a href="index.html">Inicio</a></li><li aria-current="page">Contacto</li></ol></nav>
+        <h1>Contacto y localización</h1>
+        <p class="lead">Para cualquier solicitud de información puedes ponerte en contacto con nosotros. Estaremos encantados de facilitarte la información que necesites.</p>
       </div>
+    </div>
+  </div>
 
-      <form class="form-card" id="formulario" novalidate>
-        <h2>Formulario de contacto</h2>
-        <p>Cuéntanos qué necesitas y te respondemos lo antes posible.</p>
-        <div class="form-grid">
-          <div class="field"><label for="f-nombre">Nombre *</label><input id="f-nombre" name="nombre" autocomplete="name" required></div>
-          <div class="field"><label for="f-tel">Teléfono *</label><input id="f-tel" name="telefono" type="tel" autocomplete="tel" required></div>
-          <div class="field full"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email"></div>
-          <div class="field full"><label for="f-motivo">Motivo</label>
-            <select id="f-motivo" name="motivo">
-              <option>Quiero comprar un vehículo adaptado</option>
-              <option>Quiero adaptar mi vehículo</option>
-              <option>Quiero vender mi vehículo adaptado</option>
-              <option>Alquiler de vehículo adaptado</option>
-              <option>Pedir cita para visitar las instalaciones</option>
-              <option>Información sobre ayudas y exenciones</option>
-              <option>Otra consulta</option>
-            </select>
+  <section class="band" style="padding-top:clamp(24px,3vw,40px)">
+    <div class="container">
+      <div class="sheet contact-grid">
+        <div class="contact-data">
+          <div class="row"><span class="lbl">Teléfono</span><div class="v big"><a href="tel:+34968603322">968 603 322</a></div></div>
+          <div class="row"><span class="lbl">Móviles</span><div class="v"><a href="tel:+34699934166">699 934 166</a> · <a href="tel:+34626108770">626 108 770</a></div></div>
+          <div class="row"><span class="lbl">Correo electrónico</span><div class="v"><a href="mailto:info@adapta-auto.com">info@adapta-auto.com</a></div></div>
+          <div class="row"><span class="lbl">Oficinas y taller</span><div class="v">Pol. Ind. La Estrella, C/ Neptuno, 122<br>30500 Molina de Segura (Murcia)<br><a class="link-go" style="margin-top:8px" href="https://www.google.com/maps/search/?api=1&amp;query=Calle+Neptuno+122+Pol%C3%ADgono+La+Estrella+30500+Molina+de+Segura" target="_blank" rel="noopener">Cómo llegar <svg aria-hidden="true"><use href="#i-arrow"/></svg></a></div></div>
+          <div class="row"><span class="lbl">Visitas con cita previa</span>
+            <table class="hours"><tbody>
+              <tr><td>Lunes a viernes</td><td>9:30–14:00</td></tr>
+              <tr><td></td><td>16:30–20:00</td></tr>
+              <tr><td>Sábado y domingo</td><td>Cerrado</td></tr>
+            </tbody></table>
           </div>
-          <div class="field full"><label for="f-msg">Mensaje *</label><textarea id="f-msg" name="mensaje" required placeholder="Tipo de vehículo, si vas a conducir o viajar en silla, provincia…"></textarea></div>
+        </div>
+
+        <form class="form-sheet" id="formulario" novalidate>
+          <h2>Formulario de contacto</h2>
+          <p>Cuéntanos qué necesitas y te respondemos lo antes posible.</p>
+          <div class="fgrid">
+            <div class="fcell"><label class="lbl" for="f-nombre">Nombre *</label><input id="f-nombre" name="nombre" autocomplete="name" required></div>
+            <div class="fcell"><label class="lbl" for="f-tel">Teléfono *</label><input id="f-tel" name="telefono" type="tel" autocomplete="tel" required></div>
+            <div class="fcell full"><label class="lbl" for="f-email">Correo electrónico</label><input id="f-email" name="email" type="email" autocomplete="email"></div>
+            <div class="fcell full"><label class="lbl" for="f-motivo">Motivo</label>
+              <select id="f-motivo" name="motivo">
+                <option>Quiero comprar un vehículo adaptado</option>
+                <option>Quiero adaptar mi vehículo</option>
+                <option>Quiero vender mi vehículo adaptado</option>
+                <option>Alquiler de vehículo adaptado</option>
+                <option>Pedir cita para visitar las instalaciones</option>
+                <option>Información sobre ayudas y exenciones</option>
+                <option>Otra consulta</option>
+              </select>
+            </div>
+            <div class="fcell full last"><label class="lbl" for="f-msg">Mensaje *</label><textarea id="f-msg" name="mensaje" required placeholder="Tipo de vehículo, si vas a conducir o viajar en la silla, provincia…"></textarea></div>
+          </div>
           <label class="consent"><input type="checkbox" id="f-ok" required> <span>Acepto la <a href="privacidad.html" target="_blank">política de privacidad</a>.</span></label>
-        </div>
-        <div class="form-actions">
-          <button class="btn btn-primary" type="submit"><svg aria-hidden="true"><use href="#i-mail"/></svg> Enviar consulta</button>
-          <span class="form-status" id="form-status" role="status"></span>
-        </div>
-      </form>
+          <div class="form-actions">
+            <button class="btn btn-red" type="submit"><svg aria-hidden="true"><use href="#i-mail"/></svg> Enviar consulta</button>
+            <p class="form-status" id="form-status" role="status"></p>
+          </div>
+        </form>
+      </div>
     </div>
   </section>
 
-  <section class="section-sm" style="padding-top:0">
+  <section class="band" style="padding-top:0;padding-bottom:0" aria-labelledby="h-map">
     <div class="container">
-      <div class="map">
-        <iframe title="Mapa: Adapta Auto en Molina de Segura" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Calle+Neptuno+122,+Pol%C3%ADgono+Industrial+La+Estrella,+30500+Molina+de+Segura,+Murcia&output=embed"></iframe>
-      </div>
+      <h2 id="h-map" class="sr-only">Plano de situación</h2>
+      <div class="map-frame"><iframe title="Mapa: Adapta Auto en Molina de Segura" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Calle+Neptuno+122,+Pol%C3%ADgono+Industrial+La+Estrella,+30500+Molina+de+Segura,+Murcia&amp;output=embed"></iframe></div>
+      <p class="caption"><span class="lbl">Plano de situación</span><span>Polígono Industrial La Estrella, Molina de Segura (Murcia)</span></p>
     </div>
   </section>
 </main>
 
 <footer class="footer">
   <div class="container">
-    <div class="footer-grid">
-      <div>
+    <div class="tbf">
+      <div class="cell">
         <a class="flogo" href="index.html" aria-label="Adapta Auto, ir al inicio"><img src="assets/img/logo-blanco.png" alt="Adapta Auto" width="211" height="107"></a>
-        <p style="margin-top:18px">Somos una compra-venta de vehículos nuevos y usados adaptados para silla de ruedas y para personas con todo tipo de discapacidades. Una empresa con más de 20 años en el sector. Entrega y recogida en todo el territorio nacional. Vehículos revisados y garantizados.</p>
-        <div class="socials"><a href="https://www.facebook.com/p/Adapta-Auto-100066540256170/" target="_blank" rel="noopener" aria-label="Adapta Auto en Facebook"><svg aria-hidden="true"><use href="#i-facebook"/></svg></a></div>
+        <p>Compra-venta de vehículos nuevos y usados adaptados para silla de ruedas y para personas con todo tipo de discapacidades. Más de 20 años en el sector. Entrega y recogida en todo el territorio nacional.</p>
+        <a class="social" href="https://www.facebook.com/p/Adapta-Auto-100066540256170/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-facebook"/></svg> Adapta Auto en Facebook</a>
       </div>
-      <div>
-        <h4>Vehículos</h4>
+      <div class="cell">
+        <span class="lbl">Vehículos</span>
         <ul>
           <li><a href="vehiculos.html?cat=conducir">Quiero conducir</a></li>
           <li><a href="vehiculos.html?cat=turismos">Turismos</a></li>
@@ -219,36 +209,34 @@
           <li><a href="adaptaciones.html">Adaptaciones</a></li>
         </ul>
       </div>
-      <div>
-        <h4>Adapta Auto</h4>
+      <div class="cell">
+        <span class="lbl">Adapta Auto</span>
         <ul>
           <li><a href="empresa.html">Quiénes somos</a></li>
           <li><a href="empresa.html#por-que">Por qué nosotros</a></li>
           <li><a href="empresa.html#valores">Nuestros valores</a></li>
           <li><a href="servicios.html">Servicios y garantía</a></li>
-          <li><a href="guia-vehiculo-adaptado.html">Guía gratuita</a></li>
+          <li><a href="guia-vehiculo-adaptado.html">Guía de vehículos adaptados</a></li>
           <li><a href="contacto.html">Contacto y localización</a></li>
         </ul>
       </div>
-      <div>
-        <h4>Contacto</h4>
+      <div class="cell">
+        <span class="lbl">Contacto</span>
         <address>
           Pol. Ind. La Estrella, C/ Neptuno, 122<br>30500 Molina de Segura (Murcia)<br>
           Tel. <a href="tel:+34968603322">968 603 322</a><br>
-          Móvil <a href="tel:+34699934166">699 934 166</a> · <a href="tel:+34626108770">626 108 770</a><br>
+          Móviles <a href="tel:+34699934166">699 934 166</a> y <a href="tel:+34626108770">626 108 770</a><br>
           <a href="mailto:info@adapta-auto.com">info@adapta-auto.com</a><br>
-          L–V 9:30–14:00 y 16:30–20:00
+          <span>Lunes a viernes, 9:30–14:00 y 16:30–20:00, con cita previa</span>
         </address>
       </div>
     </div>
-    <div class="footer-bottom">
+    <div class="fbar">
       <span>© <span data-year>2026</span> ADAPTA MOVIL, S.L. · CIF B-73227639</span>
-      <span><a href="privacidad.html">Aviso legal y política de privacidad</a></span>
+      <a href="privacidad.html">Aviso legal y política de privacidad</a>
     </div>
   </div>
 </footer>
-
-<a class="fab" href="tel:+34968603322" aria-label="Llamar a Adapta Auto"><svg aria-hidden="true"><use href="#i-phone"/></svg></a>
 
 <script src="assets/main.js"></script>
 </body>

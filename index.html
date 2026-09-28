@@ -4,18 +4,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Adapta Auto · Vehículos adaptados para personas con discapacidad</title>
-  <meta name="description" content="Compra-venta de vehículos nuevos y usados adaptados para silla de ruedas y para personas con todo tipo de discapacidades. Más de 20 años en el sector. Molina de Segura (Murcia). Entrega y recogida en toda España.">
-  <meta name="theme-color" content="#16171b">
+  <meta name="description" content="Compra-venta de vehículos nuevos y usados adaptados para silla de ruedas y para personas con todo tipo de discapacidades. Taller e ingenieros propios, entrega en toda España y 12 meses de garantía. Molina de Segura (Murcia).">
+  <meta name="theme-color" content="#fbfcfd">
   <meta property="og:title" content="Adapta Auto · Vehículos adaptados para personas con discapacidad">
-  <meta property="og:description" content="Compra-venta de vehículos nuevos y usados adaptados para silla de ruedas y para personas con todo tipo de discapacidades. Más de 20 años en el sector. Molina de Segura (Murcia). Entrega y recogida en toda España.">
+  <meta property="og:description" content="Compra-venta de vehículos nuevos y usados adaptados para silla de ruedas y para personas con todo tipo de discapacidades. Taller e ingenieros propios, entrega en toda España y 12 meses de garantía. Molina de Segura (Murcia).">
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/img/exposicion.jpg">
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" href="assets/img/favicon-32.png" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="preload" href="assets/fonts/archivo-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/atkinson-next-var.woff2" as="font" type="font/woff2" crossorigin>
   <script>document.documentElement.className += " js";</script>
   <link rel="stylesheet" href="assets/styles.css">
   <script type="application/ld+json">
@@ -119,28 +118,11 @@
 
 <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-<div class="topbar">
-  <div class="container">
-    <span class="hide-sm"><svg aria-hidden="true"><use href="#i-clock"/></svg> L–V 9:30–14:00 y 16:30–20:00 <span class="sep">·</span> <strong>Visitas con cita previa</strong></span>
-    <span>
-      <a href="tel:+34968603322">968 603 322</a>
-      <span class="sep">·</span>
-      <a href="tel:+34699934166">699 934 166</a>
-      <span class="sep hide-sm">·</span>
-      <a class="hide-sm" href="mailto:info@adapta-auto.com">info@adapta-auto.com</a>
-    </span>
-  </div>
-</div>
-
-<header class="header" id="header">
-  <div class="container">
-    <a class="logo" href="index.html" aria-label="Adapta Auto, ir al inicio">
-      <img src="assets/img/logo.png" alt="Adapta Auto" width="157" height="75">
-    </a>
+<header class="site-header" id="header">
+  <div class="container bar">
+    <a class="brand" href="index.html" aria-label="Adapta Auto, ir al inicio"><img src="assets/img/logo.png" alt="Adapta Auto" width="157" height="75"></a>
     <a class="header-call" href="tel:+34968603322" aria-label="Llamar al 968 603 322"><svg aria-hidden="true"><use href="#i-phone"/></svg></a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Abrir menú">
-      <svg aria-hidden="true"><use href="#i-menu"/></svg>
-    </button>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Abrir menú"><svg aria-hidden="true"><use href="#i-menu"/></svg></button>
     <nav class="nav" id="nav" aria-label="Principal">
       <ul>
         <li><a href="index.html" data-nav="inicio" aria-current="page">Inicio</a></li>
@@ -150,199 +132,240 @@
         <li><a href="empresa.html" data-nav="empresa">Empresa</a></li>
         <li><a href="guia-vehiculo-adaptado.html" data-nav="guia">Guía</a></li>
         <li><a href="contacto.html" data-nav="contacto">Contacto</a></li>
-        <li><a class="btn" href="contacto.html#formulario">Pedir cita</a></li>
+        <li class="nav-extra"><a class="btn btn-red" href="contacto.html#formulario">Pedir cita</a><a class="btn" href="tel:+34968603322"><svg aria-hidden="true"><use href="#i-phone"/></svg> 968 603 322</a></li>
       </ul>
+      <a class="header-tel" href="tel:+34968603322"><span class="lbl">Teléfono</span><strong>968 603 322</strong></a>
+      <div class="header-cta"><a class="btn btn-red" href="contacto.html#formulario">Pedir cita</a></div>
     </nav>
   </div>
 </header>
 
 <main id="contenido">
 
-  <section class="hero hero-slider" id="hero" aria-roledescription="carrusel" aria-label="Destacados">
-    <div class="hero-edge" aria-hidden="true"></div>
-    <div class="hero-bg" aria-hidden="true"><div class="hero-bg-move"><img src="assets/img/exposicion.jpg" alt="" fetchpriority="high"></div></div>
-    <div class="hero-glow" aria-hidden="true"></div>
-    <div class="container hero-inner">
-      <div class="slides">
-        <div class="slide is-active" role="group" aria-roledescription="diapositiva" aria-label="1 de 3">
-          <div class="slide-text">
-            <span class="eyebrow"><span class="dot"></span> Más de 20 años en el sector</span>
-            <h1>Vehículos garantizados <em>y entrega a domicilio</em></h1>
-            <p class="hero-lead">Compra-venta de vehículos nuevos y usados adaptados para silla de ruedas y para personas con todo tipo de discapacidades.</p>
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="vehiculos.html">Ver vehículos <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
-              <a class="btn btn-ghost" href="tel:+34968603322"><svg aria-hidden="true"><use href="#i-phone"/></svg> 968 603 322</a>
-            </div>
+  <div class="container hero-wrap">
+    <section class="sheet hero" id="hero" aria-roledescription="carrusel" aria-label="Vehículos adaptados en nuestro taller">
+      <div class="sheet-zones" aria-hidden="true"></div>
+      <div class="zone-row" aria-hidden="true"><span>A</span><span>B</span><span>C</span><span>D</span><span>E</span><span>F</span></div>
+
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <h1>Vehículos adaptados y homologados en nuestro propio taller</h1>
+          <p class="lead">Compra-venta de vehículos nuevos y usados para conducir o viajar en tu propia silla de ruedas. Te asesoramos sin compromiso y te lo llevamos a casa, en cualquier punto de España.</p>
+          <div class="actions">
+            <a class="btn btn-red" href="vehiculos.html">Ver vehículos disponibles <svg class="go" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="btn" href="tel:+34968603322"><svg aria-hidden="true"><use href="#i-phone"/></svg> 968 603 322</a>
           </div>
-          <div class="slide-media"><img src="assets/img/hero-rampa.webp" alt="Vehículo adaptado con rampa trasera para silla de ruedas" width="696" height="474" fetchpriority="high"><span class="shine" style="-webkit-mask-image:url(assets/img/hero-rampa.webp);mask-image:url(assets/img/hero-rampa.webp)"></span></div>
         </div>
-        <div class="slide" role="group" aria-roledescription="diapositiva" aria-label="2 de 3" aria-hidden="true">
-          <div class="slide-text">
-            <span class="eyebrow"><span class="dot"></span> Talleres propios</span>
-            <h2 class="h1">Todas las <em>adaptaciones</em></h2>
-            <p class="hero-lead">Rebajes de piso, rampas, plataformas, asientos, mandos para conducir y más, con la máxima seguridad y mínima alteración del diseño.</p>
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="adaptaciones.html" tabindex="-1">Ver adaptaciones <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
-              <a class="btn btn-ghost" href="contacto.html#formulario" tabindex="-1">Pedir presupuesto</a>
+
+        <div class="views">
+          <div class="views-stage">
+            <div class="view is-active" id="vista-1" role="tabpanel" aria-labelledby="vt-1">
+              <figure class="view-frame">
+                <div class="photo"><img src="assets/img/exposicion.jpg" alt="" fetchpriority="high"></div>
+                <span class="frame-tag">Vista 1 · Rampa trasera</span>
+                <div class="car">
+                  <img src="assets/img/hero-rampa.webp" width="696" height="474" alt="Vehículo adaptado con el portón abierto, rampa trasera desplegada y rebaje de piso" fetchpriority="high">
+                  <svg class="car-notes" viewBox="0 0 696 474" aria-hidden="true"><g style="--i:0"><path class="ld" d="M195 436 L70 356" pathLength="1"/><circle class="an" cx="195" cy="436" r="7"/><g class="ball-g"><circle class="bl" cx="70" cy="356" r="19"/><text class="bn" x="70" y="357">1</text></g></g><g style="--i:1"><path class="ld" d="M320 379 L402 452" pathLength="1"/><circle class="an" cx="320" cy="379" r="7"/><g class="ball-g"><circle class="bl" cx="402" cy="452" r="19"/><text class="bn" x="402" y="453">2</text></g></g><g style="--i:2"><path class="ld" d="M258 356 L62 212" pathLength="1"/><circle class="an" cx="258" cy="356" r="7"/><g class="ball-g"><circle class="bl" cx="62" cy="212" r="19"/><text class="bn" x="62" y="213">3</text></g></g></svg>
+                </div>
+              </figure>
+              <div class="view-foot">
+                <div class="cota"><span>Acceso en silla de ruedas</span></div>
+                <ol class="view-legend" aria-label="Elementos de la adaptación">
+                  <li style="--i:0"><span class="ball">1</span> Rampa trasera</li>
+                  <li style="--i:1"><span class="ball">2</span> Rebaje de piso</li>
+                  <li style="--i:2"><span class="ball">3</span> Guías y anclajes para la silla</li>
+                </ol>
+                <p class="view-desc">Rebaje de piso en la parte trasera, rampa de acceso y guías con anclajes para la silla: la persona viaja integrada, con un asiento a cada lado.</p>
+              </div>
+            </div>
+
+            <div class="view" id="vista-2" role="tabpanel" aria-labelledby="vt-2" aria-hidden="true">
+              <figure class="view-frame">
+                <div class="photo"><img src="assets/img/exposicion.jpg" alt=""></div>
+                <span class="frame-tag">Vista 2 · Rampa lateral</span>
+                <div class="car">
+                  <img src="assets/img/hero-adaptacion.webp" width="655" height="419" alt="Monovolumen en sección con rampa lateral desplegada y piso rebajado" decoding="async">
+                  <svg class="car-notes" viewBox="0 0 655 419" aria-hidden="true"><g style="--i:0"><path class="ld" d="M98 352 L26 282" pathLength="1"/><circle class="an" cx="98" cy="352" r="7"/><g class="ball-g"><circle class="bl" cx="26" cy="282" r="19"/><text class="bn" x="26" y="283">1</text></g></g><g style="--i:1"><path class="ld" d="M308 230 L420 42" pathLength="1"/><circle class="an" cx="308" cy="230" r="7"/><g class="ball-g"><circle class="bl" cx="420" cy="42" r="19"/><text class="bn" x="420" y="43">2</text></g></g><g style="--i:2"><path class="ld" d="M124 168 L40 40" pathLength="1"/><circle class="an" cx="124" cy="168" r="7"/><g class="ball-g"><circle class="bl" cx="40" cy="40" r="19"/><text class="bn" x="40" y="41">3</text></g></g></svg>
+                </div>
+              </figure>
+              <div class="view-foot">
+                <div class="cota"><span>Acceso lateral en silla</span></div>
+                <ol class="view-legend" aria-label="Elementos de la adaptación">
+                  <li style="--i:0"><span class="ball">1</span> Rampa lateral</li>
+                  <li style="--i:1"><span class="ball">2</span> Rebaje de piso integral</li>
+                  <li style="--i:2"><span class="ball">3</span> Puerta lateral de acceso</li>
+                </ol>
+                <p class="view-desc">Rebaje de piso integral, puerta eléctrica y rampa lateral: se puede viajar de copiloto, en el centro o conducir desde la propia silla.</p>
+              </div>
+            </div>
+
+            <div class="view" id="vista-3" role="tabpanel" aria-labelledby="vt-3" aria-hidden="true">
+              <figure class="view-frame">
+                <div class="photo"><img src="assets/img/exposicion.jpg" alt=""></div>
+                <span class="frame-tag">Vista 3 · Stock actual</span>
+                <div class="stack">
+                  <a class="ph" style="--i:0" href="vehiculo.html?id=908" tabindex="-1" aria-hidden="true"><img src="assets/fotos/908A.jpg" alt="" decoding="async"><span class="ball">1</span></a>
+                  <a class="ph" style="--i:1" href="vehiculo.html?id=861" tabindex="-1" aria-hidden="true"><img src="assets/fotos/861A.jpg" alt="" decoding="async"><span class="ball">2</span></a>
+                  <a class="ph" style="--i:2" href="vehiculo.html?id=912" tabindex="-1" aria-hidden="true"><img src="assets/fotos/912A.jpg" alt="" decoding="async"><span class="ball">3</span></a>
+                </div>
+              </figure>
+              <div class="view-foot">
+                <div class="cota"><span>Todas las marcas y modelos</span></div>
+                <ol class="view-legend" aria-label="Vehículos del stock">
+                  <li style="--i:0"><span class="ball">1</span> <a href="vehiculo.html?id=908" tabindex="-1">Volkswagen Caddy Maxi</a></li>
+                  <li style="--i:1"><span class="ball">2</span> <a href="vehiculo.html?id=861" tabindex="-1">Mercedes Sprinter</a></li>
+                  <li style="--i:2"><span class="ball">3</span> <a href="vehiculo.html?id=912" tabindex="-1">Lancia Voyager</a></li>
+                </ol>
+                <p class="view-desc">Turismos, monovolúmenes, furgonetas y taxis, revisados, transferidos y con 12 meses de garantía mecánica en piezas y mano de obra.</p>
+              </div>
             </div>
           </div>
-          <div class="slide-media"><img src="assets/img/hero-adaptacion.webp" alt="Monovolumen con rebaje de piso y rampa lateral" width="655" height="419" decoding="async"><span class="shine" style="-webkit-mask-image:url(assets/img/hero-adaptacion.webp);mask-image:url(assets/img/hero-adaptacion.webp)"></span></div>
-        </div>
-        <div class="slide" role="group" aria-roledescription="diapositiva" aria-label="3 de 3" aria-hidden="true">
-          <div class="slide-text">
-            <span class="eyebrow"><span class="dot"></span> Todas las marcas y modelos</span>
-            <h2 class="h1">Amplio <em>stock</em></h2>
-            <p class="hero-lead">Turismos, monovolúmenes, furgonetas y taxis para conducir, ir de copiloto o viajar en la parte central o trasera.</p>
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="vehiculos.html" tabindex="-1">Ver el stock <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
-              <a class="btn btn-ghost" href="empresa.html" tabindex="-1">Conócenos</a>
+
+          <div class="view-tabs">
+            <div class="vt-list" role="tablist" aria-label="Vistas del taller">
+            <button class="vt" type="button" id="vt-1" role="tab" aria-selected="true" aria-controls="vista-1"><span class="ball">1</span><span class="t">Rampa trasera</span><span class="bar"><i></i></span></button>
+            <button class="vt" type="button" id="vt-2" role="tab" aria-selected="false" aria-controls="vista-2" tabindex="-1"><span class="ball">2</span><span class="t">Rampa lateral</span><span class="bar"><i></i></span></button>
+            <button class="vt" type="button" id="vt-3" role="tab" aria-selected="false" aria-controls="vista-3" tabindex="-1"><span class="ball">3</span><span class="t">Stock actual</span><span class="bar"><i></i></span></button>
             </div>
-          </div>
-          <div class="slide-media slide-stack">
-            <img class="s1" src="assets/fotos/908A.jpg" alt="Volkswagen Caddy Maxi adaptado" decoding="async">
-            <img class="s2" src="assets/fotos/861A.jpg" alt="Mercedes Sprinter con plataforma eléctrica" decoding="async">
-            <img class="s3" src="assets/fotos/912A.jpg" alt="Lancia Voyager con rampa lateral" decoding="async">
+            <button class="vt vt-pause" type="button" aria-label="Pausar las vistas"><svg class="i-pause" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="5" width="4" height="14"/><rect x="14" y="5" width="4" height="14"/></svg><svg class="i-play" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M7 5v14l12-7z"/></svg></button>
           </div>
         </div>
       </div>
 
-      <div class="hero-float f1" aria-hidden="true"><span class="ico"><svg><use href="#i-shield"/></svg></span><span><strong>12 meses</strong>de garantía</span></div>
-      <div class="hero-float f2" aria-hidden="true"><span class="ico"><svg><use href="#i-truck"/></svg></span><span><strong>Puerta a puerta</strong>en toda España</span></div>
-
-      <div class="hero-controls">
-        <button type="button" class="hc-btn" data-dir="-1" aria-label="Diapositiva anterior"><svg aria-hidden="true"><use href="#i-left"/></svg></button>
-        <div class="hc-dots" role="tablist" aria-label="Elegir diapositiva">
-          <button type="button" class="hc-dot is-active" role="tab" aria-selected="true" aria-label="Diapositiva 1"><span><i></i></span></button>
-          <button type="button" class="hc-dot" role="tab" aria-selected="false" aria-label="Diapositiva 2"><span><i></i></span></button>
-          <button type="button" class="hc-dot" role="tab" aria-selected="false" aria-label="Diapositiva 3"><span><i></i></span></button>
+      <div class="cajetin">
+        <dl class="tb">
+          <div><dt class="lbl">Experiencia</dt><dd>Más de 20 años en el sector</dd></div>
+          <div><dt class="lbl">Equipo</dt><dd>Personal con discapacidad que conoce cada necesidad</dd></div>
+          <div><dt class="lbl">Taller propio</dt><dd>Ingenieros que elaboran y homologan cada reforma</dd></div>
+          <div><dt class="lbl">Entrega</dt><dd>Puerta a puerta en toda España, con 12 meses de garantía</dd></div>
+        </dl>
+        <div class="tb-foot">
+          <p class="tb-cell"><span class="lbl">Taller</span> <strong>Adapta Movil, S.L.</strong></p>
+          <div class="tb-cell tb-signs"><span class="lbl" id="firma">Cada vehículo sale</span>
+            <ul class="signoff" aria-labelledby="firma"><li><svg aria-hidden="true"><use href="#i-check"/></svg>Revisado</li><li><svg aria-hidden="true"><use href="#i-check"/></svg>Transferido</li><li><svg aria-hidden="true"><use href="#i-check"/></svg>Homologado</li></ul>
+          </div>
+          <p class="tb-cell tb-sheetno" aria-hidden="true"><span class="lbl">Hoja</span> <strong>01</strong> <span>/ 09</span></p>
         </div>
-        <button type="button" class="hc-btn" data-dir="1" aria-label="Diapositiva siguiente"><svg aria-hidden="true"><use href="#i-right"/></svg></button>
-        <button type="button" class="hc-btn hc-pause" aria-label="Pausar el carrusel" aria-pressed="false"><svg class="i-pause" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg><svg class="i-play" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M7 5v14l12-7z"/></svg></button>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 
-  <section class="stats" aria-label="Por qué elegirnos">
+  <section class="band" aria-labelledby="h-stock">
     <div class="container">
-      <div class="stats-grid">
-        <div class="stat reveal"><span class="ico"><svg aria-hidden="true"><use href="#i-award"/></svg></span><div><strong><span data-countup="20">20</span> años</strong><span>de experiencia en el sector</span></div></div>
-        <div class="stat reveal"><span class="ico"><svg aria-hidden="true"><use href="#i-building"/></svg></span><div><strong><span data-countup="700">700</span> m²</strong><span>de instalaciones y taller propio</span></div></div>
-        <div class="stat reveal"><span class="ico"><svg aria-hidden="true"><use href="#i-shield"/></svg></span><div><strong><span data-countup="12">12</span> meses</strong><span>de garantía en piezas y mano de obra</span></div></div>
-        <div class="stat reveal"><span class="ico"><svg aria-hidden="true"><use href="#i-truck"/></svg></span><div><strong>Toda España</strong><span>servicio puerta a puerta</span></div></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="brands" aria-label="Marcas con las que trabajamos">
-    <div class="container brands-head"><span>Trabajamos con todas las marcas y modelos</span></div>
-    <div class="marquee" aria-hidden="true"><div class="marquee-track">
-      <span>Citroën</span><span>Renault</span><span>Fiat</span><span>Volkswagen</span><span>Mercedes-Benz</span><span>Ford</span><span>Peugeot</span><span>Kia</span><span>Chrysler</span><span>Lancia</span><span>Opel</span><span>Vexel</span>
-      <span>Citroën</span><span>Renault</span><span>Fiat</span><span>Volkswagen</span><span>Mercedes-Benz</span><span>Ford</span><span>Peugeot</span><span>Kia</span><span>Chrysler</span><span>Lancia</span><span>Opel</span><span>Vexel</span>
-    </div></div>
-    <p class="sr-only">Citroën, Renault, Fiat, Volkswagen, Mercedes-Benz, Ford, Peugeot, Kia, Chrysler, Lancia, Opel y Vexel, entre otras.</p>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="section-head split">
+      <div class="band-head">
         <div>
-          <span class="kicker">Vehículos disponibles</span>
-          <h2>Últimas incorporaciones</h2>
-          <p>Todos nuestros vehículos son examinados por expertos y se entregan revisados, transferidos, homologados y con garantía.</p>
+          <h2 id="h-stock">Vehículos disponibles</h2>
+          <p>Cada vehículo se entrega revisado, transferido y homologado, con garantía.</p>
         </div>
-        <a class="btn btn-outline" href="vehiculos.html">Ver todo el stock <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="link-go" href="vehiculos.html">Ver todo el stock <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
       </div>
-      <div class="car-grid" id="featured" data-limit="6"></div>
+      <div class="sheet schedule-sheet">
+        <table class="schedule" id="featured" data-limit="6">
+          <caption class="sr-only">Vehículos disponibles con referencia, año, kilómetros, cambio y precio</caption>
+          <thead><tr><th scope="col" class="sc-view"><span class="sr-only">Foto</span></th><th scope="col" class="sc-ref">Ref.</th><th scope="col">Vehículo y adaptación</th><th scope="col" class="sc-hide">Año</th><th scope="col" class="sc-hide">Kilómetros</th><th scope="col" class="sc-hide">Cambio</th><th scope="col" class="sc-price">Precio</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
     </div>
   </section>
 
-  <section class="section section-soft">
+  <section class="band" style="padding-top:0" aria-labelledby="h-need">
     <div class="container">
-      <div class="section-head center">
-        <span class="kicker">Qué buscas</span>
-        <h2>Una solución para cada necesidad</h2>
-        <p>Vehículos adaptados para conducir, para el copiloto o para viajar en la parte central o trasera en tu propia silla de ruedas.</p>
-      </div>
-      <div class="cat-grid">
-        <a class="cat-card reveal" href="vehiculos.html?cat=turismos"><img src="assets/img/cat-turismos.jpg" alt="" loading="lazy"><span class="count" data-count="turismos"></span><span class="go"><svg aria-hidden="true"><use href="#i-arrow"/></svg></span><div class="cat-body"><h3>Turismos</h3><p>Turismos y monovolúmenes con rampa para viajar en la silla de ruedas.</p></div></a>
-        <a class="cat-card reveal" href="vehiculos.html?cat=conducir"><img src="assets/img/cat-conducir.jpg" alt="" loading="lazy"><span class="count" data-count="conducir"></span><span class="go"><svg aria-hidden="true"><use href="#i-arrow"/></svg></span><div class="cat-body"><h3>Quiero conducir</h3><p>Conduce desde tu propia silla o con mandos adaptados.</p></div></a>
-        <a class="cat-card reveal" href="vehiculos.html?cat=furgonetas"><img src="assets/img/cat-furgonetas.jpg" alt="" loading="lazy"><span class="count" data-count="furgonetas"></span><span class="go"><svg aria-hidden="true"><use href="#i-arrow"/></svg></span><div class="cat-body"><h3>Furgonetas</h3><p>Furgonetas y minibuses con plataforma para varias sillas de ruedas.</p></div></a>
-        <a class="cat-card reveal" href="vehiculos.html?cat=taxi"><img src="assets/img/cat-taxi.jpg" alt="" loading="lazy"><span class="count" data-count="taxi"></span><span class="go"><svg aria-hidden="true"><use href="#i-arrow"/></svg></span><div class="cat-body"><h3>Taxi</h3><p>Vehículos preparados para el servicio de taxi accesible.</p></div></a>
-        <a class="cat-card reveal" href="adaptaciones.html"><img src="assets/img/cat-adaptaciones.jpg" alt="" loading="lazy"><span class="go"><svg aria-hidden="true"><use href="#i-arrow"/></svg></span><div class="cat-body"><h3>Adaptaciones</h3><p>Ayudas de acceso, conducción, elevación y transporte.</p></div></a>
-        <a class="cat-card reveal" href="vehiculos.html?cat=alquiler"><img src="assets/img/cat-alquiler.jpg" alt="" loading="lazy"><span class="go"><svg aria-hidden="true"><use href="#i-arrow"/></svg></span><div class="cat-body"><h3>Alquiler</h3><p>Consúltanos la disponibilidad de vehículos adaptados de alquiler.</p></div></a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container split">
-      <div class="photo-stack reveal">
-        <div class="photo"><img src="assets/img/entrega.jpg" alt="Entrega de un vehículo adaptado a una clienta en silla de ruedas" loading="lazy"></div>
-        <div class="photo small"><img src="assets/img/instalaciones.jpg" alt="Fachada de las instalaciones de Adapta Móvil en Molina de Segura" loading="lazy"></div>
-        <div class="photo-badge"><strong>+20</strong><span>años en<br>el sector</span></div>
-      </div>
-      <div class="reveal">
-        <span class="kicker">Adapta Auto</span>
-        <h2>Conocemos mejor que nadie las necesidades de nuestro colectivo</h2>
-        <p>Somos una empresa con más de 20 años en el sector, contando con personal discapacitado, el cual conoce mejor que nadie las necesidades de nuestro colectivo.</p>
-        <p>Póngase en contacto con nosotros sin compromiso y le asesoraremos del vehículo o la adaptación que más se ajusta a sus necesidades, así como de las posibles ayudas y exenciones de impuestos a la hora de comprar un coche adaptado.</p>
-        <ul class="checklist">
-          <li><span class="ico"><svg aria-hidden="true"><use href="#i-check"/></svg></span><span><strong>Amplio stock</strong> para conducir, de copiloto o en la parte central o trasera.</span></li>
-          <li><span class="ico"><svg aria-hidden="true"><use href="#i-check"/></svg></span><span><strong>Talleres propios</strong> y un equipo técnico de ingenieros para homologar cualquier reforma.</span></li>
-          <li><span class="ico"><svg aria-hidden="true"><use href="#i-check"/></svg></span><span><strong>Servicio puerta a puerta</strong> en todo el territorio nacional.</span></li>
+      <div class="sheet">
+        <div class="sheet-pad">
+          <h2 id="h-need">¿Qué necesitas?</h2>
+          <p class="lead" style="margin:0">Vehículos adaptados para el conductor, el copiloto, la parte central o la trasera.</p>
+        </div>
+        <ul class="ix">
+          <li><a href="vehiculos.html?cat=conducir"><span class="detail"><img src="assets/img/cat-conducir.jpg" alt="" loading="lazy"></span><div><h3>Conducir yo mismo</h3><p>Mandos adaptados o conducción desde la propia silla de ruedas.</p></div><span class="lbl count" data-count="conducir"></span><svg class="go" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+          <li><a href="vehiculos.html?cat=turismos"><span class="detail"><img src="assets/img/cat-turismos.jpg" alt="" loading="lazy"></span><div><h3>Viajar en mi silla de ruedas</h3><p>Turismos y monovolúmenes con rampa, rebaje de piso y anclajes.</p></div><span class="lbl count" data-count="turismos"></span><svg class="go" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+          <li><a href="vehiculos.html?cat=furgonetas"><span class="detail"><img src="assets/img/cat-furgonetas.jpg" alt="" loading="lazy"></span><div><h3>Transportar a varias personas</h3><p>Furgonetas y minibuses con plataforma elevadora.</p></div><span class="lbl count" data-count="furgonetas"></span><svg class="go" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+          <li><a href="vehiculos.html?cat=taxi"><span class="detail"><img src="assets/img/cat-taxi.jpg" alt="" loading="lazy"></span><div><h3>Taxi adaptado</h3><p>Vehículos preparados para el servicio de taxi accesible.</p></div><span class="lbl count" data-count="taxi"></span><svg class="go" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+          <li><a href="adaptaciones.html"><span class="detail"><img src="assets/img/cat-adaptaciones.jpg" alt="" loading="lazy"></span><div><h3>Adaptar mi vehículo</h3><p>Rampas, plataformas, asientos, mandos y grúas instalados en nuestro taller.</p></div><span class="lbl count">9 adaptaciones</span><svg class="go" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
         </ul>
-        <a class="btn btn-dark" href="empresa.html">Conoce la empresa <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <p class="brands-line"><strong>Todas las marcas y modelos:</strong> Citroën, Renault, Fiat, Volkswagen, Mercedes-Benz, Ford, Peugeot, Kia, Chrysler, Lancia, Opel y más.</p>
       </div>
     </div>
   </section>
 
-  <section class="section section-dark">
+  <section class="band" style="padding-top:0" aria-labelledby="h-steps">
     <div class="container">
-      <div class="section-head center">
-        <span class="kicker">Cómo trabajamos</span>
-        <h2>Tu vehículo adaptado, sin moverte de casa</h2>
-        <p>Nuestra distribución hasta el domicilio del cliente rompe una de las barreras con las que se encuentran miles de personas con movilidad reducida.</p>
+     <div class="sheet sheet-pad steps-sheet">
+      <div class="sheet-zones" aria-hidden="true"></div>
+      <div class="zone-row" aria-hidden="true"><span>A</span><span>B</span><span>C</span><span>D</span><span>E</span><span>F</span></div>
+      <div class="band-head">
+        <div>
+          <h2 id="h-steps">Así trabajamos</h2>
+          <p>Nuestra distribución hasta el domicilio del cliente rompe una de las barreras con las que se encuentran miles de personas con movilidad reducida.</p>
+        </div>
       </div>
-      <ol class="steps">
-        <li class="step reveal"><h3>Asesoramiento</h3><p>Nos cuentas qué necesitas y te aconsejamos, sin compromiso, el vehículo y la adaptación ideales.</p></li>
-        <li class="step reveal"><h3>Tu vehículo</h3><p>Lo eliges de nuestro stock o buscamos el que necesitas, de cualquier marca y modelo.</p></li>
-        <li class="step reveal"><h3>Ayudas y trámites</h3><p>Te informamos de las ayudas y exenciones, y nos encargamos de transferencia y homologación.</p></li>
-        <li class="step reveal"><h3>Entrega a domicilio</h3><p>Revisado, transferido, homologado y con 12 meses de garantía, en la puerta de tu casa.</p></li>
+      <ol class="chain">
+        <li><span class="ball">1</span><h3>Asesoramiento</h3><p>Nos cuentas qué necesitas y te aconsejamos, sin compromiso, el vehículo y la adaptación adecuados.</p></li>
+        <li><span class="ball">2</span><h3>Tu vehículo</h3><p>Lo eliges de nuestro stock o lo buscamos para ti, de cualquier marca y modelo.</p></li>
+        <li><span class="ball">3</span><h3>Trámites y homologación</h3><p>Te informamos de las ayudas y exenciones, y nuestros ingenieros tramitan y homologan la reforma.</p></li>
+        <li><span class="ball">4</span><h3>Entrega en casa</h3><p>Revisado, transferido, homologado y con 12 meses de garantía, en la puerta de tu casa.</p></li>
       </ol>
+     </div>
     </div>
   </section>
 
-  <section class="section">
+  <section class="band" aria-labelledby="h-about">
     <div class="container">
-      <div class="banner reveal">
-        <div>
-          <span class="kicker">Guía gratuita</span>
-          <h2>Guía de vehículos adaptados para personas con movilidad reducida</h2>
-          <p>Todo lo que necesitas saber antes de comprar o adaptar tu vehículo.</p>
-          <ul>
-            <li><svg aria-hidden="true"><use href="#i-check"/></svg> Tipos de adaptaciones homologadas</li>
-            <li><svg aria-hidden="true"><use href="#i-check"/></svg> Qué partes se pueden adaptar</li>
-            <li><svg aria-hidden="true"><use href="#i-check"/></svg> Qué tener en cuenta antes de comprar</li>
-            <li><svg aria-hidden="true"><use href="#i-check"/></svg> Beneficios fiscales y subvenciones</li>
-          </ul>
-          <a class="btn btn-light" href="guia-vehiculo-adaptado.html">Leer la guía <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+     <div class="sheet about about-split">
+      <figure class="about-view"><img src="assets/img/entrega.jpg" alt="Entrega de un vehículo adaptado a una clienta en silla de ruedas" loading="lazy"><figcaption class="frame-tag">Entrega de un vehículo</figcaption></figure>
+      <div class="about-copy">
+        <h2 id="h-about">Conocemos estas necesidades de primera mano</h2>
+        <p class="lead">Somos una empresa con más de 20 años en el sector y contamos con personal discapacitado, que conoce mejor que nadie las necesidades de nuestro colectivo.</p>
+        <p class="muted">Te asesoramos sobre el vehículo o la adaptación que mejor se ajusta a ti, y sobre las posibles ayudas y exenciones de impuestos al comprar un coche adaptado.</p>
+        <a class="link-go" href="empresa.html">Conoce la empresa <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <div class="about-team">
+          <span class="detail"><img src="assets/img/equipo.jpg" alt="Equipo de Adapta Auto" loading="lazy"></span>
+          <p>Nuestro equipo, en las instalaciones de Molina de Segura (Murcia): 700 m² con taller propio.</p>
         </div>
-        <div class="banner-photo"><img src="assets/img/cat-turismos.jpg" alt="" loading="lazy"></div>
+      </div>
+     </div>
+    </div>
+  </section>
+
+  <section class="band" style="padding-top:0" aria-labelledby="h-guide">
+    <div class="container">
+      <div class="sheet memo">
+        <div>
+          <h2 id="h-guide">Guía de vehículos adaptados</h2>
+          <p class="lead">Todo lo que conviene saber antes de comprar o adaptar un vehículo para una persona con movilidad reducida.</p>
+          <a class="btn" href="guia-vehiculo-adaptado.html">Leer la guía <svg class="go" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+        <div>
+          <span class="lbl">Índice</span>
+          <ol class="toc-list">
+            <li><a href="guia-vehiculo-adaptado.html#posibilidades">Posibilidades de los vehículos adaptados <svg aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+            <li><a href="guia-vehiculo-adaptado.html#tipos">Tipos de adaptaciones homologadas <svg aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+            <li><a href="guia-vehiculo-adaptado.html#partes">Partes del vehículo que se adaptan <svg aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+            <li><a href="guia-vehiculo-adaptado.html#antes">Antes de comprar <svg aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+            <li><a href="guia-vehiculo-adaptado.html#costes">Costes de la adaptación <svg aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+            <li><a href="guia-vehiculo-adaptado.html#ayudas">Beneficios fiscales y ayudas <svg aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+          </ol>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="section" style="padding-top:0">
+  <section class="band" style="padding-top:0" aria-labelledby="h-contact">
     <div class="container">
-      <div class="cta reveal">
-        <div>
-          <h2>¿Hablamos?</h2>
-          <p>Para visitar nuestras instalaciones pide cita previa, de lunes a viernes de 9:30 a 14:00 y de 16:30 a 20:00.</p>
+      <div class="sheet contact-block">
+        <div class="contact-head">
+          <div>
+            <h2 id="h-contact">Hablemos de tu vehículo</h2>
+            <p>Para visitar nuestras instalaciones pide cita previa. Te atendemos por teléfono, por correo o en persona.</p>
+          </div>
+          <div class="actions"><a class="btn btn-red" href="contacto.html#formulario">Escribirnos <svg class="go" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
         </div>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="tel:+34968603322"><svg aria-hidden="true"><use href="#i-phone"/></svg> 968 603 322</a>
-          <a class="btn btn-ghost" href="contacto.html#formulario">Escríbenos</a>
-        </div>
+        <dl class="tb">
+          <div><dt class="lbl">Teléfono</dt><dd class="big"><a href="tel:+34968603322">968 603 322</a></dd></div>
+          <div><dt class="lbl">Móvil</dt><dd class="big"><a href="tel:+34699934166">699 934 166</a></dd></div>
+          <div><dt class="lbl">Visitas con cita previa</dt><dd>Lunes a viernes<br>9:30–14:00 y 16:30–20:00</dd></div>
+          <div><dt class="lbl">Instalaciones</dt><dd>Pol. Ind. La Estrella<br>C/ Neptuno, 122<br>30500 Molina de Segura</dd></div>
+        </dl>
       </div>
     </div>
   </section>
@@ -350,14 +373,14 @@
 
 <footer class="footer">
   <div class="container">
-    <div class="footer-grid">
-      <div>
+    <div class="tbf">
+      <div class="cell">
         <a class="flogo" href="index.html" aria-label="Adapta Auto, ir al inicio"><img src="assets/img/logo-blanco.png" alt="Adapta Auto" width="211" height="107"></a>
-        <p style="margin-top:18px">Somos una compra-venta de vehículos nuevos y usados adaptados para silla de ruedas y para personas con todo tipo de discapacidades. Una empresa con más de 20 años en el sector. Entrega y recogida en todo el territorio nacional. Vehículos revisados y garantizados.</p>
-        <div class="socials"><a href="https://www.facebook.com/p/Adapta-Auto-100066540256170/" target="_blank" rel="noopener" aria-label="Adapta Auto en Facebook"><svg aria-hidden="true"><use href="#i-facebook"/></svg></a></div>
+        <p>Compra-venta de vehículos nuevos y usados adaptados para silla de ruedas y para personas con todo tipo de discapacidades. Más de 20 años en el sector. Entrega y recogida en todo el territorio nacional.</p>
+        <a class="social" href="https://www.facebook.com/p/Adapta-Auto-100066540256170/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-facebook"/></svg> Adapta Auto en Facebook</a>
       </div>
-      <div>
-        <h4>Vehículos</h4>
+      <div class="cell">
+        <span class="lbl">Vehículos</span>
         <ul>
           <li><a href="vehiculos.html?cat=conducir">Quiero conducir</a></li>
           <li><a href="vehiculos.html?cat=turismos">Turismos</a></li>
@@ -367,36 +390,34 @@
           <li><a href="adaptaciones.html">Adaptaciones</a></li>
         </ul>
       </div>
-      <div>
-        <h4>Adapta Auto</h4>
+      <div class="cell">
+        <span class="lbl">Adapta Auto</span>
         <ul>
           <li><a href="empresa.html">Quiénes somos</a></li>
           <li><a href="empresa.html#por-que">Por qué nosotros</a></li>
           <li><a href="empresa.html#valores">Nuestros valores</a></li>
           <li><a href="servicios.html">Servicios y garantía</a></li>
-          <li><a href="guia-vehiculo-adaptado.html">Guía gratuita</a></li>
+          <li><a href="guia-vehiculo-adaptado.html">Guía de vehículos adaptados</a></li>
           <li><a href="contacto.html">Contacto y localización</a></li>
         </ul>
       </div>
-      <div>
-        <h4>Contacto</h4>
+      <div class="cell">
+        <span class="lbl">Contacto</span>
         <address>
           Pol. Ind. La Estrella, C/ Neptuno, 122<br>30500 Molina de Segura (Murcia)<br>
           Tel. <a href="tel:+34968603322">968 603 322</a><br>
-          Móvil <a href="tel:+34699934166">699 934 166</a> · <a href="tel:+34626108770">626 108 770</a><br>
+          Móviles <a href="tel:+34699934166">699 934 166</a> y <a href="tel:+34626108770">626 108 770</a><br>
           <a href="mailto:info@adapta-auto.com">info@adapta-auto.com</a><br>
-          L–V 9:30–14:00 y 16:30–20:00
+          <span>Lunes a viernes, 9:30–14:00 y 16:30–20:00, con cita previa</span>
         </address>
       </div>
     </div>
-    <div class="footer-bottom">
+    <div class="fbar">
       <span>© <span data-year>2026</span> ADAPTA MOVIL, S.L. · CIF B-73227639</span>
-      <span><a href="privacidad.html">Aviso legal y política de privacidad</a></span>
+      <a href="privacidad.html">Aviso legal y política de privacidad</a>
     </div>
   </div>
 </footer>
-
-<a class="fab" href="tel:+34968603322" aria-label="Llamar a Adapta Auto"><svg aria-hidden="true"><use href="#i-phone"/></svg></a>
 
 <script src="assets/vehiculos.js"></script>
 <script src="assets/main.js"></script>

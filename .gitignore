@@ -1,0 +1,5 @@
+# Impeccable: ajustes locales, caché del detector y capturas de revisión
+.impeccable/config.local.json
+.impeccable/hook.cache.json
+.impeccable/review/
+.claude/settings.local.json

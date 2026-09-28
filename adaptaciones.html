@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Adaptaciones para vehículos · Adapta Auto</title>
   <meta name="description" content="Adaptaciones homologadas para vehículos: cajeados, plataformas, tablas de transferencia, asientos adaptados, aceleradores, mandos multifunción, inversores de pedales, grúas y butacas.">
-  <meta name="theme-color" content="#16171b">
+  <meta name="theme-color" content="#fbfcfd">
   <meta property="og:title" content="Adaptaciones para vehículos · Adapta Auto">
   <meta property="og:description" content="Adaptaciones homologadas para vehículos: cajeados, plataformas, tablas de transferencia, asientos adaptados, aceleradores, mandos multifunción, inversores de pedales, grúas y butacas.">
   <meta property="og:type" content="website">
@@ -13,9 +13,8 @@
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" href="assets/img/favicon-32.png" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="preload" href="assets/fonts/archivo-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/atkinson-next-var.woff2" as="font" type="font/woff2" crossorigin>
   <script>document.documentElement.className += " js";</script>
   <link rel="stylesheet" href="assets/styles.css">
 
@@ -99,28 +98,11 @@
 
 <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-<div class="topbar">
-  <div class="container">
-    <span class="hide-sm"><svg aria-hidden="true"><use href="#i-clock"/></svg> L–V 9:30–14:00 y 16:30–20:00 <span class="sep">·</span> <strong>Visitas con cita previa</strong></span>
-    <span>
-      <a href="tel:+34968603322">968 603 322</a>
-      <span class="sep">·</span>
-      <a href="tel:+34699934166">699 934 166</a>
-      <span class="sep hide-sm">·</span>
-      <a class="hide-sm" href="mailto:info@adapta-auto.com">info@adapta-auto.com</a>
-    </span>
-  </div>
-</div>
-
-<header class="header" id="header">
-  <div class="container">
-    <a class="logo" href="index.html" aria-label="Adapta Auto, ir al inicio">
-      <img src="assets/img/logo.png" alt="Adapta Auto" width="157" height="75">
-    </a>
+<header class="site-header" id="header">
+  <div class="container bar">
+    <a class="brand" href="index.html" aria-label="Adapta Auto, ir al inicio"><img src="assets/img/logo.png" alt="Adapta Auto" width="157" height="75"></a>
     <a class="header-call" href="tel:+34968603322" aria-label="Llamar al 968 603 322"><svg aria-hidden="true"><use href="#i-phone"/></svg></a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Abrir menú">
-      <svg aria-hidden="true"><use href="#i-menu"/></svg>
-    </button>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Abrir menú"><svg aria-hidden="true"><use href="#i-menu"/></svg></button>
     <nav class="nav" id="nav" aria-label="Principal">
       <ul>
         <li><a href="index.html" data-nav="inicio">Inicio</a></li>
@@ -130,83 +112,94 @@
         <li><a href="empresa.html" data-nav="empresa">Empresa</a></li>
         <li><a href="guia-vehiculo-adaptado.html" data-nav="guia">Guía</a></li>
         <li><a href="contacto.html" data-nav="contacto">Contacto</a></li>
-        <li><a class="btn" href="contacto.html#formulario">Pedir cita</a></li>
+        <li class="nav-extra"><a class="btn btn-red" href="contacto.html#formulario">Pedir cita</a><a class="btn" href="tel:+34968603322"><svg aria-hidden="true"><use href="#i-phone"/></svg> 968 603 322</a></li>
       </ul>
+      <a class="header-tel" href="tel:+34968603322"><span class="lbl">Teléfono</span><strong>968 603 322</strong></a>
+      <div class="header-cta"><a class="btn btn-red" href="contacto.html#formulario">Pedir cita</a></div>
     </nav>
   </div>
 </header>
 
 <main id="contenido">
-  <section class="page-hero">
-    <div class="bg"><img src="assets/img/cat-adaptaciones.jpg" alt=""></div>
+  <div class="container page-head">
+    <div class="sheet">
+      <div class="sheet-zones" aria-hidden="true"></div>
+      <div class="zone-row" aria-hidden="true"><span>A</span><span>B</span><span>C</span><span>D</span><span>E</span><span>F</span></div>
+      <span class="sheet-id lbl" aria-hidden="true">Hoja 04 <span>/ 09</span></span>
+      <div class="ph-copy">
+        <nav aria-label="Ruta"><ol class="crumbs"><li><a href="index.html">Inicio</a></li><li aria-current="page">Adaptaciones</li></ol></nav>
+        <h1>Todas las adaptaciones</h1>
+        <p class="lead">Adaptamos y transformamos vehículos con la máxima seguridad, confort y mínima alteración del diseño, para el conductor, el copiloto, la parte central o la trasera.</p>
+      </div>
+      <div class="ph-view"><img src="assets/img/cat-adaptaciones.jpg" alt=""><span class="frame-tag">Detalle · Mandos adaptados</span></div>
+    </div>
+  </div>
+
+  <section class="band" style="padding-top:clamp(24px,3vw,40px)">
     <div class="container">
-      <nav class="breadcrumb" aria-label="Ruta"><a href="index.html">Inicio</a><span aria-hidden="true">›</span>Adaptaciones</nav>
-      <h1>Todas las adaptaciones</h1>
-      <p>Adaptamos y transformamos vehículos con la máxima seguridad, confort y mínima alteración del diseño, para el conductor, el copiloto, la parte central o la trasera.</p>
+      <div class="sheet sheet-pad">
+      <section class="det-group" aria-labelledby="g0">
+        <header><h2 id="g0">Ayudas de acceso al vehículo</h2><p>Para entrar y salir con comodidad, en la propia silla o pasando al asiento.</p></header>
+        <ul class="det-grid">
+          <li class="det"><span class="detail"><img src="assets/fotos/867A.jpg" alt="Cajeados" loading="lazy"></span><h3>Cajeados</h3><p>Rebaje de piso en la parte trasera con rampa, guías y anclajes para viajar integrado en la propia silla de ruedas.</p></li>
+          <li class="det"><span class="detail"><img src="assets/fotos/880A.jpg" alt="Plataformas" loading="lazy"></span><h3>Plataformas</h3><p>Plataformas elevadoras para acceder a furgonetas y minibuses sin salir de la silla de ruedas.</p></li>
+          <li class="det"><span class="detail"><img src="assets/fotos/871A.jpg" alt="Tablas de transferencia" loading="lazy"></span><h3>Tablas de transferencia</h3><p>Facilitan el paso de la silla de ruedas al asiento del vehículo de forma segura.</p></li>
+          <li class="det"><span class="detail"><img src="assets/fotos/868A.jpg" alt="Asientos adaptados" loading="lazy"></span><h3>Asientos adaptados</h3><p>Asientos giratorios y de salida exterior que acercan el asiento a la persona.</p></li>
+        </ul>
+      </section>
+      <section class="det-group" aria-labelledby="g1">
+        <header><h2 id="g1">Ayudas a la conducción</h2><p>Mandos adaptados para conducir con autonomía, incluso desde la propia silla.</p></header>
+        <ul class="det-grid">
+          <li class="det"><span class="detail"><img src="assets/fotos/866A.jpg" alt="Aceleradores electrónicos y manuales" loading="lazy"></span><h3>Aceleradores electrónicos y manuales</h3><p>Acelerador y freno manuales o electrónicos para conducir sin usar los pies.</p></li>
+          <li class="det"><span class="detail"><img src="assets/fotos/870A.jpg" alt="Telecomandos y satélites multifunción" loading="lazy"></span><h3>Telecomandos y satélites multifunción</h3><p>Luces, intermitentes, claxon y otras funciones al alcance de la mano.</p></li>
+          <li class="det"><span class="detail"><img src="assets/fotos/869A.jpg" alt="Inversores de pedales" loading="lazy"></span><h3>Inversores de pedales</h3><p>Trasladan el acelerador al pie izquierdo para conducir con una sola pierna.</p></li>
+        </ul>
+      </section>
+      <div class="det-pair">
+      <section class="det-group" aria-labelledby="g2">
+        <header><h2 id="g2">Ayudas de elevación y almacenamiento</h2><p>Para guardar la silla de ruedas en el vehículo sin esfuerzo.</p></header>
+        <ul class="det-grid">
+          <li class="det"><span class="detail"><img src="assets/fotos/881A.jpg" alt="Grúas y recogesillas" loading="lazy"></span><h3>Grúas y recogesillas</h3><p>Sistemas que cargan la silla de ruedas o el scooter en el maletero.</p></li>
+        </ul>
+      </section>
+      <section class="det-group" aria-labelledby="g3">
+        <header><h2 id="g3">Ayudas al transporte</h2><p>Soluciones para viajar con seguridad y confort.</p></header>
+        <ul class="det-grid">
+          <li class="det"><span class="detail"><img src="assets/fotos/orientativas/872.svg" alt="Butacas (imagen orientativa)" loading="lazy"></span><h3>Butacas</h3><p>Butacas y asientos especiales para el transporte de personas con movilidad reducida.</p><span class="lbl det-note">Imagen orientativa</span></li>
+        </ul>
+      </section>
+      </div>
+      </div>
     </div>
   </section>
 
-  <section class="section">
+  <section class="band" style="padding-top:0">
     <div class="container">
-      <div class="adapt-group">
-        <div class="adapt-group-head"><span class="ico"><svg aria-hidden="true"><use href="#i-lift"/></svg></span><div><h2>Ayudas de acceso al vehículo</h2><p>Para entrar y salir del vehículo con comodidad, en tu propia silla o pasando al asiento.</p></div></div>
-        <div class="adapt-grid">
-          <article class="adapt-card reveal"><div class="media"><img src="assets/fotos/867A.jpg" alt="Cajeados" loading="lazy"></div><div class="body"><h3>Cajeados</h3><p>Rebaje de piso en la parte trasera con rampa, guías y anclajes para viajar integrado en tu propia silla de ruedas.</p></div></article>
-          <article class="adapt-card reveal"><div class="media"><img src="assets/fotos/880A.jpg" alt="Plataformas" loading="lazy"></div><div class="body"><h3>Plataformas</h3><p>Plataformas elevadoras para acceder a furgonetas y minibuses sin salir de la silla de ruedas.</p></div></article>
-          <article class="adapt-card reveal"><div class="media"><img src="assets/fotos/871A.jpg" alt="Tablas de transferencia" loading="lazy"></div><div class="body"><h3>Tablas de transferencia</h3><p>Facilitan el paso de la silla de ruedas al asiento del vehículo de forma segura.</p></div></article>
-          <article class="adapt-card reveal"><div class="media"><img src="assets/fotos/868A.jpg" alt="Asientos adaptados" loading="lazy"></div><div class="body"><h3>Asientos adaptados</h3><p>Asientos giratorios y de salida exterior que acercan el asiento a la persona.</p></div></article>
+      <div class="sheet rev sheet-pad">
+        <div>
+          <h2>Proyectos de reforma homologados</h2>
+          <p class="lead">Aceptamos los retos que nos proponen nuestros clientes y buscamos las mejores soluciones en cualquier tipo de vehículo.</p>
+          <div class="actions"><a class="btn btn-red" href="contacto.html#formulario">Pedir presupuesto <svg class="go" aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="btn" href="guia-vehiculo-adaptado.html#tipos">Tipos de adaptaciones</a></div>
+        </div>
+        <div class="rev-box">
+          <span class="rev-mark"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2 15 14H1z" fill="currentColor"/></svg><span class="lbl">Seguridad y calidad</span></span>
+          <p>Es nuestro compromiso cumplir con todos los estándares y normativas actuales de la industria del vehículo. Por ello contamos con un equipo técnico de ingenieros altamente cualificados, que ponemos a su disposición para elaborar, tramitar y homologar cualquier proyecto de reforma de vehículos adaptados.</p>
         </div>
       </div>
-      <div class="adapt-group">
-        <div class="adapt-group-head"><span class="ico"><svg aria-hidden="true"><use href="#i-wheel"/></svg></span><div><h2>Ayudas a la conducción</h2><p>Mandos adaptados para conducir con total autonomía, incluso desde la propia silla.</p></div></div>
-        <div class="adapt-grid">
-          <article class="adapt-card reveal"><div class="media"><img src="assets/fotos/866A.jpg" alt="Aceleradores electrónicos y manuales" loading="lazy"></div><div class="body"><h3>Aceleradores electrónicos y manuales</h3><p>Acelerador y freno manuales o electrónicos para conducir sin usar los pies.</p></div></article>
-          <article class="adapt-card reveal"><div class="media"><img src="assets/fotos/870A.jpg" alt="Telecomandos y satélites multifunción" loading="lazy"></div><div class="body"><h3>Telecomandos y satélites multifunción</h3><p>Luces, intermitentes, claxon y otras funciones al alcance de la mano.</p></div></article>
-          <article class="adapt-card reveal"><div class="media"><img src="assets/fotos/869A.jpg" alt="Inversores de pedales" loading="lazy"></div><div class="body"><h3>Inversores de pedales</h3><p>Trasladan el acelerador al pie izquierdo para conducir con una sola pierna.</p></div></article>
-        </div>
-      </div>
-      <div class="adapt-group">
-        <div class="adapt-group-head"><span class="ico"><svg aria-hidden="true"><use href="#i-access"/></svg></span><div><h2>Ayudas de elevación y almacenamiento</h2><p>Para guardar la silla de ruedas en el vehículo sin esfuerzo.</p></div></div>
-        <div class="adapt-grid">
-          <article class="adapt-card reveal"><div class="media"><img src="assets/fotos/881A.jpg" alt="Grúas y recogesillas" loading="lazy"></div><div class="body"><h3>Grúas y recogesillas</h3><p>Sistemas que cargan la silla de ruedas o el scooter en el maletero.</p></div></article>
-        </div>
-      </div>
-      <div class="adapt-group">
-        <div class="adapt-group-head"><span class="ico"><svg aria-hidden="true"><use href="#i-seat"/></svg></span><div><h2>Ayudas al transporte</h2><p>Soluciones para viajar con seguridad y confort.</p></div></div>
-        <div class="adapt-grid">
-          <article class="adapt-card reveal"><div class="media"><img src="assets/fotos/orientativas/872.svg" alt="Butaca adaptada (imagen orientativa)" loading="lazy"></div><div class="body"><h3>Butacas</h3><p>Butacas y asientos especiales para el transporte de personas con movilidad reducida.</p></div></article>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-soft">
-    <div class="container split">
-      <div class="reveal">
-        <span class="kicker">Seguridad y calidad</span>
-        <h2>Proyectos de reforma homologados</h2>
-        <p>Es nuestro compromiso cumplir con todos los estándares y normativas actuales de la industria del vehículo. Por ello contamos con un equipo técnico de ingenieros altamente cualificados, que ponemos a su disposición para elaborar, tramitar y homologar cualquier proyecto de reforma de vehículos adaptados.</p>
-        <p>Aceptamos los retos que nos proponen nuestros clientes y buscamos las mejores soluciones en cualquier tipo de vehículo.</p>
-        <div class="hero-actions" style="margin-bottom:0">
-          <a class="btn btn-primary" href="contacto.html#formulario">Pedir presupuesto <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
-          <a class="btn btn-outline" href="guia-vehiculo-adaptado.html#tipos">Tipos de adaptaciones</a>
-        </div>
-      </div>
-      <div class="photo wide reveal"><img src="assets/img/cat-conducir.jpg" alt="Interior de un vehículo adaptado para conducir desde la silla de ruedas" loading="lazy"></div>
     </div>
   </section>
 </main>
 
 <footer class="footer">
   <div class="container">
-    <div class="footer-grid">
-      <div>
+    <div class="tbf">
+      <div class="cell">
         <a class="flogo" href="index.html" aria-label="Adapta Auto, ir al inicio"><img src="assets/img/logo-blanco.png" alt="Adapta Auto" width="211" height="107"></a>
-        <p style="margin-top:18px">Somos una compra-venta de vehículos nuevos y usados adaptados para silla de ruedas y para personas con todo tipo de discapacidades. Una empresa con más de 20 años en el sector. Entrega y recogida en todo el territorio nacional. Vehículos revisados y garantizados.</p>
-        <div class="socials"><a href="https://www.facebook.com/p/Adapta-Auto-100066540256170/" target="_blank" rel="noopener" aria-label="Adapta Auto en Facebook"><svg aria-hidden="true"><use href="#i-facebook"/></svg></a></div>
+        <p>Compra-venta de vehículos nuevos y usados adaptados para silla de ruedas y para personas con todo tipo de discapacidades. Más de 20 años en el sector. Entrega y recogida en todo el territorio nacional.</p>
+        <a class="social" href="https://www.facebook.com/p/Adapta-Auto-100066540256170/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-facebook"/></svg> Adapta Auto en Facebook</a>
       </div>
-      <div>
-        <h4>Vehículos</h4>
+      <div class="cell">
+        <span class="lbl">Vehículos</span>
         <ul>
           <li><a href="vehiculos.html?cat=conducir">Quiero conducir</a></li>
           <li><a href="vehiculos.html?cat=turismos">Turismos</a></li>
@@ -216,36 +209,34 @@
           <li><a href="adaptaciones.html">Adaptaciones</a></li>
         </ul>
       </div>
-      <div>
-        <h4>Adapta Auto</h4>
+      <div class="cell">
+        <span class="lbl">Adapta Auto</span>
         <ul>
           <li><a href="empresa.html">Quiénes somos</a></li>
           <li><a href="empresa.html#por-que">Por qué nosotros</a></li>
           <li><a href="empresa.html#valores">Nuestros valores</a></li>
           <li><a href="servicios.html">Servicios y garantía</a></li>
-          <li><a href="guia-vehiculo-adaptado.html">Guía gratuita</a></li>
+          <li><a href="guia-vehiculo-adaptado.html">Guía de vehículos adaptados</a></li>
           <li><a href="contacto.html">Contacto y localización</a></li>
         </ul>
       </div>
-      <div>
-        <h4>Contacto</h4>
+      <div class="cell">
+        <span class="lbl">Contacto</span>
         <address>
           Pol. Ind. La Estrella, C/ Neptuno, 122<br>30500 Molina de Segura (Murcia)<br>
           Tel. <a href="tel:+34968603322">968 603 322</a><br>
-          Móvil <a href="tel:+34699934166">699 934 166</a> · <a href="tel:+34626108770">626 108 770</a><br>
+          Móviles <a href="tel:+34699934166">699 934 166</a> y <a href="tel:+34626108770">626 108 770</a><br>
           <a href="mailto:info@adapta-auto.com">info@adapta-auto.com</a><br>
-          L–V 9:30–14:00 y 16:30–20:00
+          <span>Lunes a viernes, 9:30–14:00 y 16:30–20:00, con cita previa</span>
         </address>
       </div>
     </div>
-    <div class="footer-bottom">
+    <div class="fbar">
       <span>© <span data-year>2026</span> ADAPTA MOVIL, S.L. · CIF B-73227639</span>
-      <span><a href="privacidad.html">Aviso legal y política de privacidad</a></span>
+      <a href="privacidad.html">Aviso legal y política de privacidad</a>
     </div>
   </div>
 </footer>
-
-<a class="fab" href="tel:+34968603322" aria-label="Llamar a Adapta Auto"><svg aria-hidden="true"><use href="#i-phone"/></svg></a>
 
 <script src="assets/main.js"></script>
 </body>
