@@ -225,7 +225,8 @@
       '<td class="sc-ref num">' + v.id + "</td>" +
       '<th scope="row" class="sc-name"><a href="' + url + '">' + esc(title(v)) + "</a>" +
         (v.adaptacion ? '<span class="sc-adapt">' + esc(v.adaptacion) + "</span>" : "") +
-        '<span class="sc-meta">' + ["Ref. " + v.id, y, km].filter(Boolean).map(esc).join(" · ") + "</span></th>" +
+        '<span class="sc-meta">' + ["Ref. " + v.id, y, km].filter(Boolean).map(esc).join(" · ") + "</span>" +
+        '<span class="sc-mprice">' + (v.precio == null ? "Precio: consultar" : fmtEur(v.precio) + (v.iva4 ? " <small>IVA al 4 % incluido</small>" : "")) + "</span></th>" +
       '<td class="sc-hide num">' + (y ? esc(y) : none) + "</td>" +
       '<td class="sc-hide num">' + (km ? esc(km) : none) + "</td>" +
       '<td class="sc-hide">' + (g ? esc(g) : none) + "</td>" +
