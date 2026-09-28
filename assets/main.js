@@ -41,67 +41,107 @@
   var hero = $("#hero");
   if (hero) {
     var slides = $$(".slide", hero), dots = $$(".hc-dot", hero), pauseBtn = $(".hc-pause", hero);
-    var DURATION = 7000, current = 0, timer = null, paused = reduceMotion, hover = false;
-    hero.style.setProperty("--slide-ms", DURATION + "ms");
-    if (reduceMotion) { hero.classList.add("no-auto"); pauseBtn.setAttribute("aria-pressed", "true"); pauseBtn.setAttribute("aria-label", "Reanudar el carrusel"); }
+    var current = 0, userPaused = reduceMotion, hoverHold = false, focusHold = false;
+    hero.style.setProperty("--slide-ms", "7000ms");
 
-    var go = function (i, user) {
+    var sync = function () { hero.classList.toggle("is-paused", userPaused || hoverHold || focusHold); };
+    var setPauseLabel = function () {
+      pauseBtn.setAttribute("aria-pressed", String(userPaused));
+      pauseBtn.setAttribute("aria-label", userPaused ? "Reanudar el carrusel" : "Pausar el carrusel");
+    };
+    if (reduceMotion) { hero.classList.add("no-auto"); setPauseLabel(); }
+
+    var markDots = function (i) {
+      dots.forEach(function (d, j) {
+        d.classList.remove("is-active");
+        d.classList.toggle("is-done", j < i);
+        d.setAttribute("aria-selected", String(j === i));
+      });
+      void dots[i].offsetWidth;            // reinicia la barra de progreso
+      dots[i].classList.add("is-active");
+    };
+    var go = function (i) {
       i = (i + slides.length) % slides.length;
       if (i === current) return;
       var prev = slides[current];
       prev.classList.remove("is-active");
       prev.classList.add("is-leaving");
-      setTimeout(function () { prev.classList.remove("is-leaving"); }, 650);
+      setTimeout(function () { if (!prev.classList.contains("is-active")) prev.classList.remove("is-leaving"); }, 700);
       slides.forEach(function (s, j) {
         var on = j === i;
-        if (on) s.classList.add("is-active");
+        if (on) s.classList.remove("is-leaving");
+        s.classList.toggle("is-active", on);
         s.setAttribute("aria-hidden", String(!on));
         $$("a, button", s).forEach(function (el) { el.tabIndex = on ? 0 : -1; });
       });
-      dots.forEach(function (d, j) {
-        d.classList.remove("is-active");
-        d.setAttribute("aria-selected", String(j === i));
-      });
-      void dots[i].offsetWidth;            // reinicia la barra de progreso
-      dots[i].classList.add("is-active");
       current = i;
-      if (user) restart();
-    };
-    var restart = function () {
-      clearTimeout(timer);
-      if (paused || hover) return;
-      timer = setTimeout(function () { go(current + 1); restart(); }, DURATION);
-    };
-    var setPaused = function (p) {
-      paused = p;
-      hero.classList.toggle("is-paused", p);
-      pauseBtn.setAttribute("aria-pressed", String(p));
-      pauseBtn.setAttribute("aria-label", p ? "Reanudar el carrusel" : "Pausar el carrusel");
-      if (!p) { hero.classList.remove("no-auto"); var d = dots[current]; d.classList.remove("is-active"); void d.offsetWidth; d.classList.add("is-active"); }
-      restart();
+      markDots(i);
     };
 
-    $$("[data-dir]", hero).forEach(function (b) { b.addEventListener("click", function () { go(current + Number(b.getAttribute("data-dir")), true); }); });
-    dots.forEach(function (d, j) { d.addEventListener("click", function () { go(j, true); }); });
-    pauseBtn.addEventListener("click", function () { setPaused(!paused); });
-    hero.addEventListener("mouseenter", function () { hover = true; clearTimeout(timer); hero.classList.add("is-paused"); });
-    hero.addEventListener("mouseleave", function () { hover = false; if (!paused) { hero.classList.remove("is-paused"); var d = dots[current]; d.classList.remove("is-active"); void d.offsetWidth; d.classList.add("is-active"); } restart(); });
-    hero.addEventListener("focusin", function () { hover = true; clearTimeout(timer); hero.classList.add("is-paused"); });
-    hero.addEventListener("focusout", function (e) { if (!hero.contains(e.relatedTarget)) { hover = false; if (!paused) hero.classList.remove("is-paused"); restart(); } });
-    hero.addEventListener("keydown", function (e) {
-      if (e.key === "ArrowRight") go(current + 1, true);
-      if (e.key === "ArrowLeft") go(current - 1, true);
+    // Avance automático: cuando la barra de progreso de la diapositiva actual termina
+    hero.addEventListener("animationend", function (e) {
+      if (e.animationName === "hcProgress" && e.target.closest(".hc-dot") === dots[current]) go(current + 1);
     });
-    var tx = null;
-    hero.addEventListener("touchstart", function (e) { tx = e.touches[0].clientX; }, { passive: true });
+
+    $$("[data-dir]", hero).forEach(function (b) { b.addEventListener("click", function () { go(current + Number(b.getAttribute("data-dir"))); }); });
+    dots.forEach(function (d, j) { d.addEventListener("click", function () { go(j); }); });
+    pauseBtn.addEventListener("click", function () {
+      userPaused = !userPaused;
+      if (!userPaused && hero.classList.contains("no-auto")) { hero.classList.remove("no-auto"); markDots(current); }
+      setPauseLabel();
+      sync();
+    });
+
+    // Se detiene mientras se lee el texto o se usan los controles con el ratón, o con el teclado
+    $$(".slide-text, .hero-controls", hero).forEach(function (el) {
+      el.addEventListener("pointerenter", function (e) { if (e.pointerType === "mouse") { hoverHold = true; sync(); } });
+      el.addEventListener("pointerleave", function (e) { if (e.pointerType === "mouse") { hoverHold = false; sync(); } });
+    });
+    hero.addEventListener("focusin", function (e) {
+      var kb = false;
+      try { kb = e.target.matches(":focus-visible"); } catch (err) { kb = true; }
+      if (kb) { focusHold = true; sync(); }
+    });
+    hero.addEventListener("focusout", function (e) { if (!hero.contains(e.relatedTarget)) { focusHold = false; sync(); } });
+    hero.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowRight") go(current + 1);
+      if (e.key === "ArrowLeft") go(current - 1);
+    });
+
+    // Deslizar con el dedo
+    var tx = null, ty = null;
+    hero.addEventListener("touchstart", function (e) { tx = e.touches[0].clientX; ty = e.touches[0].clientY; }, { passive: true });
     hero.addEventListener("touchend", function (e) {
       if (tx == null) return;
-      var dx = e.changedTouches[0].clientX - tx;
-      if (Math.abs(dx) > 50) go(current + (dx < 0 ? 1 : -1), true);
-      tx = null;
+      var dx = e.changedTouches[0].clientX - tx, dy = e.changedTouches[0].clientY - ty;
+      if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.5) go(current + (dx < 0 ? 1 : -1));
+      tx = ty = null;
     });
-    document.addEventListener("visibilitychange", function () { if (document.hidden) clearTimeout(timer); else restart(); });
-    restart();
+
+    // Las animaciones arrancan cuando la imagen del primer vehículo está lista
+    var ready = function () { hero.classList.add("is-ready"); };
+    var firstImg = $(".slide.is-active .slide-media img", hero);
+    if (firstImg && firstImg.decode) firstImg.decode().then(ready, ready); else ready();
+    setTimeout(ready, 1500);
+
+    // Profundidad al hacer scroll: el fondo va más lento y el vehículo algo más rápido
+    if (!reduceMotion) {
+      var ticking = false;
+      var parallax = function () {
+        ticking = false;
+        var y = window.scrollY;
+        if (y <= hero.offsetHeight + 400) hero.style.setProperty("--scroll", Math.max(0, y).toFixed(1));
+      };
+      window.addEventListener("scroll", function () { if (!ticking) { ticking = true; requestAnimationFrame(parallax); } }, { passive: true });
+    }
+
+    // El botón flotante de llamada aparece al dejar atrás el hero
+    var fab = $(".fab");
+    if (fab) {
+      var fabSync = function () { fab.classList.toggle("is-hidden", window.scrollY < hero.offsetHeight * .6); };
+      window.addEventListener("scroll", fabSync, { passive: true });
+      fabSync();
+    }
   }
 
   /* ---------- Contadores animados ---------- */

@@ -16,6 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+  <script>document.documentElement.className += " js";</script>
   <link rel="stylesheet" href="assets/styles.css">
   <script type="application/ld+json">
   {
@@ -136,6 +137,7 @@
     <a class="logo" href="index.html" aria-label="Adapta Auto, ir al inicio">
       <img src="assets/img/logo.png" alt="Adapta Auto" width="157" height="75">
     </a>
+    <a class="header-call" href="tel:+34968603322" aria-label="Llamar al 968 603 322"><svg aria-hidden="true"><use href="#i-phone"/></svg></a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Abrir menú">
       <svg aria-hidden="true"><use href="#i-menu"/></svg>
     </button>
@@ -157,7 +159,8 @@
 <main id="contenido">
 
   <section class="hero hero-slider" id="hero" aria-roledescription="carrusel" aria-label="Destacados">
-    <div class="hero-bg" aria-hidden="true"><img src="assets/img/exposicion.jpg" alt="" fetchpriority="high"></div>
+    <div class="hero-edge" aria-hidden="true"></div>
+    <div class="hero-bg" aria-hidden="true"><div class="hero-bg-move"><img src="assets/img/exposicion.jpg" alt="" fetchpriority="high"></div></div>
     <div class="hero-glow" aria-hidden="true"></div>
     <div class="container hero-inner">
       <div class="slides">
@@ -171,7 +174,7 @@
               <a class="btn btn-ghost" href="tel:+34968603322"><svg aria-hidden="true"><use href="#i-phone"/></svg> 968 603 322</a>
             </div>
           </div>
-          <div class="slide-media"><img src="assets/img/hero-rampa.webp" alt="Vehículo adaptado con rampa trasera para silla de ruedas" width="696" height="474"></div>
+          <div class="slide-media"><img src="assets/img/hero-rampa.webp" alt="Vehículo adaptado con rampa trasera para silla de ruedas" width="696" height="474" fetchpriority="high"><span class="shine" style="-webkit-mask-image:url(assets/img/hero-rampa.webp);mask-image:url(assets/img/hero-rampa.webp)"></span></div>
         </div>
         <div class="slide" role="group" aria-roledescription="diapositiva" aria-label="2 de 3" aria-hidden="true">
           <div class="slide-text">
@@ -183,7 +186,7 @@
               <a class="btn btn-ghost" href="contacto.html#formulario" tabindex="-1">Pedir presupuesto</a>
             </div>
           </div>
-          <div class="slide-media"><img src="assets/img/hero-adaptacion.webp" alt="Monovolumen con rebaje de piso y rampa lateral" width="655" height="419" loading="lazy"></div>
+          <div class="slide-media"><img src="assets/img/hero-adaptacion.webp" alt="Monovolumen con rebaje de piso y rampa lateral" width="655" height="419" decoding="async"><span class="shine" style="-webkit-mask-image:url(assets/img/hero-adaptacion.webp);mask-image:url(assets/img/hero-adaptacion.webp)"></span></div>
         </div>
         <div class="slide" role="group" aria-roledescription="diapositiva" aria-label="3 de 3" aria-hidden="true">
           <div class="slide-text">
@@ -196,9 +199,9 @@
             </div>
           </div>
           <div class="slide-media slide-stack">
-            <img class="s1" src="assets/fotos/908A.jpg" alt="Volkswagen Caddy Maxi adaptado" loading="lazy">
-            <img class="s2" src="assets/fotos/861A.jpg" alt="Mercedes Sprinter con plataforma eléctrica" loading="lazy">
-            <img class="s3" src="assets/fotos/912A.jpg" alt="Lancia Voyager con rampa lateral" loading="lazy">
+            <img class="s1" src="assets/fotos/908A.jpg" alt="Volkswagen Caddy Maxi adaptado" decoding="async">
+            <img class="s2" src="assets/fotos/861A.jpg" alt="Mercedes Sprinter con plataforma eléctrica" decoding="async">
+            <img class="s3" src="assets/fotos/912A.jpg" alt="Lancia Voyager con rampa lateral" decoding="async">
           </div>
         </div>
       </div>
@@ -209,9 +212,9 @@
       <div class="hero-controls">
         <button type="button" class="hc-btn" data-dir="-1" aria-label="Diapositiva anterior"><svg aria-hidden="true"><use href="#i-left"/></svg></button>
         <div class="hc-dots" role="tablist" aria-label="Elegir diapositiva">
-          <button type="button" class="hc-dot is-active" role="tab" aria-selected="true" aria-label="Diapositiva 1"><span></span></button>
-          <button type="button" class="hc-dot" role="tab" aria-selected="false" aria-label="Diapositiva 2"><span></span></button>
-          <button type="button" class="hc-dot" role="tab" aria-selected="false" aria-label="Diapositiva 3"><span></span></button>
+          <button type="button" class="hc-dot is-active" role="tab" aria-selected="true" aria-label="Diapositiva 1"><span><i></i></span></button>
+          <button type="button" class="hc-dot" role="tab" aria-selected="false" aria-label="Diapositiva 2"><span><i></i></span></button>
+          <button type="button" class="hc-dot" role="tab" aria-selected="false" aria-label="Diapositiva 3"><span><i></i></span></button>
         </div>
         <button type="button" class="hc-btn" data-dir="1" aria-label="Diapositiva siguiente"><svg aria-hidden="true"><use href="#i-right"/></svg></button>
         <button type="button" class="hc-btn hc-pause" aria-label="Pausar el carrusel" aria-pressed="false"><svg class="i-pause" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg><svg class="i-play" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M7 5v14l12-7z"/></svg></button>
